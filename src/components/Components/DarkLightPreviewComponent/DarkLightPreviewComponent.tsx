@@ -13,7 +13,7 @@ export function DarkLightPreviewComponent({ imageUrl, title }: Props) {
     <div className={styles.item}>
       <div className='z-[3] p-[2.5rem]'>
         <div className='h-[150] overflow-hidden rounded-[1rem_1rem_0_0] border border-b-0 border-solid border-[#aaa]'>
-          <Link href='google.com' className='pointer-events-auto'>
+          <Link href='' className='pointer-events-auto'>
             <Image src={imageUrl} alt='' />
           </Link>
         </div>
