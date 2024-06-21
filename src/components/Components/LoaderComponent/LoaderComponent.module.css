@@ -1,0 +1,15 @@
+.text > * {
+  display: inline;
+  color: hsl(0 0% 100% / 0.2);
+  background-image: linear-gradient(90deg, white, hsl(0 0% 100% / 0.2));
+  background-clip: text;
+  background-size: 0% 100%;
+  animation: text-reveal linear 5s infinite;
+  /* animation-duration: 10000ms; */
+}
+
+@keyframes text-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}

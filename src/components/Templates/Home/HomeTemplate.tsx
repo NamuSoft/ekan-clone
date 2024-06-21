@@ -1,30 +1,41 @@
-import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
-  import { Layout } from "antd";
+import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
+
+import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
+import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
+import { HomeFooterModule } from "~/components/Modules/Home/HomeFooterModule";
+
+import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
+import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderComponent";
 
 type Props = {
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
+  linesAtomProps: React.ComponentProps<typeof LinesAtom>;
 };
 
-export const HomeTemplate = (props: Props) => {
+export const HomeTemplate = ({
+  homeContentModuleProps,
+  linesAtomProps,
+}: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
-    {/*
-    <Header style={{ padding: 0, height: 50 }}>
-    place for header module
-    </Header>
-    */}
+    <Layout
+      style={{ height: "100%" }}
+      className='font-sora m-auto bg-[#1d1d1d] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+    >
+      {/* <LoaderComponent /> */}
+      <LinesAtom {...linesAtomProps} />
 
-    <Content style={{ overflow: "auto" }}>
-           <HomeContentModule {...props.homeContentModuleProps}  />
-    </Content>
+      <Header className='relative z-50 bg-transparent py-[1.8rem]'>
+        <HomeHeaderModule />
+      </Header>
 
-    {/*
-    <Footer style={{ padding: 0, minHeight: 50 }}>
-    place for footer module
-    </Footer>
-    */}
-  </Layout>
+      <Content className='z-[2] flex items-center justify-center py-[6rem]'>
+        <HomeContentModule {...homeContentModuleProps} />
+      </Content>
+
+      <Footer className='z-[2] bg-transparent'>
+        <HomeFooterModule />
+      </Footer>
+    </Layout>
   );
 };
-  
