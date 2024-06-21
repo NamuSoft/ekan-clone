@@ -20,9 +20,25 @@ export function ProgressAtom() {
     [pathLength, 0]
   );
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const visibility = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["hidden", "visible"]
+  );
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <motion.div className={styles.progress} style={{ opacity }}>
+    <motion.div
+      className={styles.progress}
+      style={{ opacity, visibility }}
+      onClick={scrollToTop}
+    >
       <svg
         width='44'
         height='44'
