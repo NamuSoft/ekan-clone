@@ -7,9 +7,9 @@ export function LoaderComponent() {
     <motion.div
       className=' fixed inset-0 z-[9999] my-auto flex h-[100vh] items-center justify-center bg-black'
       initial={{ translateY: 0 }}
-      animate={{ translateY: -(window.innerHeight + 100) }}
+      animate={{ translateY: -10000 }}
       exit={{ translateY: 0 }}
-      transition={{ duration: 2, ease: "easeInOut", delay: 2.8 }}
+      transition={{ duration: 2, ease: "easeInOut", delay: 2.5 }}
     >
       <motion.div
         className={styles.text}
