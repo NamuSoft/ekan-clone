@@ -14,7 +14,7 @@ export function DarkLightPreviewComponent({ imageUrl, title, route }: Props) {
     <div className={styles.item}>
       <div className='z-[3] p-[2.5rem]'>
         <div className='h-[150] overflow-hidden rounded-[1rem_1rem_0_0] border border-b-0 border-solid border-[#aaa]'>
-          <Link href={route} className='pointer-events-auto'>
+          <Link href={route} className='pointer-events-auto' target='blank'>
             <Image src={imageUrl} alt='' preview={false} />
           </Link>
         </div>
