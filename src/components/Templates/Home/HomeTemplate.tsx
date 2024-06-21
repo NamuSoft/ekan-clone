@@ -7,6 +7,7 @@ import { HomeFooterModule } from "~/components/Modules/Home/HomeFooterModule";
 
 import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
 import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderComponent";
+import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
 
 type Props = {
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
@@ -20,9 +21,10 @@ export const HomeTemplate = ({
   return (
     <Layout
       style={{ height: "100%" }}
-      className='font-sora m-auto bg-[#1d1d1d] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+      className='m-auto overflow-x-hidden bg-[#1d1d1d] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
     >
-      {/* <LoaderComponent /> */}
+      <LoaderComponent />
+      <CustomCursorAtom />
       <LinesAtom {...linesAtomProps} />
 
       <Header className='relative z-50 bg-transparent py-[1.8rem]'>
