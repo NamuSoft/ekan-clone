@@ -1,20 +1,27 @@
 import { DarkLightPreviewComponent } from "~/components/Components/DarkLightPreviewComponent/DarkLightPreviewComponent";
+import { ThemeSwitchComponent } from "~/components/Components/ThemeSwitchComponent/ThemeSwitchComponent";
 
 type Props = {
   darkLightProps: Array<{
     imageUrl: string;
     title: string;
   }>;
+  preferredTheme: "light" | "dark";
 };
 
-export const HomeContentModule = ({ darkLightProps }: Props) => {
+export const HomeContentModule = ({
+  darkLightProps,
+  preferredTheme,
+}: Props) => {
   return (
-    <div className='flex flex-col gap-[4.75rem] text-center text-white'>
+    <div className='flex flex-col gap-[4.75rem] text-center text-black dark:text-white'>
       <div>
         <h1 className='mb-[1rem] text-[4.375rem]'>GAVI</h1>
         <h4 className='text-3xl'>
           Creative Personal
-          <span className='ml-[0.25rem] text-[#c8f31d]'>Portfolio</span>
+          <span className='text-main dark:text-mainDark ml-[0.25rem]'>
+            Portfolio
+          </span>
           Template
         </h4>
       </div>
@@ -24,6 +31,8 @@ export const HomeContentModule = ({ darkLightProps }: Props) => {
           <DarkLightPreviewComponent key={content.title} {...content} />
         ))}
       </div>
+
+      <ThemeSwitchComponent preferredTheme={preferredTheme} />
     </div>
   );
 };

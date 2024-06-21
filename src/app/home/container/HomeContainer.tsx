@@ -13,6 +13,7 @@ export const HomeContainer = () => {
           title: "Light Mode",
         },
       ],
+      preferredTheme: "dark",
     },
     linesAtomProps: { numberOfLines: 5 },
   };

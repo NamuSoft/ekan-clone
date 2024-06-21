@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import { ConfigProvider, Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
@@ -19,25 +19,37 @@ export const HomeTemplate = ({
   linesAtomProps,
 }: Props) => {
   return (
-    <Layout
-      style={{ height: "100%" }}
-      className='m-auto overflow-x-hidden bg-[#1d1d1d] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+    <ConfigProvider
+      theme={{
+        components: {
+          Button: {
+            defaultActiveBorderColor: "#ffffff",
+            defaultHoverBorderColor: "#ffffff",
+            defaultHoverColor: "#000000",
+          },
+        },
+      }}
     >
-      <LoaderComponent />
-      <CustomCursorAtom />
-      <LinesAtom {...linesAtomProps} />
+      <Layout
+        style={{ height: "100%" }}
+        className='bg-background dark:bg-backgroundDark m-auto overflow-x-hidden font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+      >
+        <LoaderComponent />
+        <CustomCursorAtom />
+        <LinesAtom {...linesAtomProps} />
 
-      <Header className='relative z-50 bg-transparent py-[1.8rem]'>
-        <HomeHeaderModule />
-      </Header>
+        <Header className='relative z-50 bg-transparent py-[1.8rem]'>
+          <HomeHeaderModule />
+        </Header>
 
-      <Content className='z-[2] flex items-center justify-center py-[6rem]'>
-        <HomeContentModule {...homeContentModuleProps} />
-      </Content>
+        <Content className='z-[2] flex items-center justify-center py-[6rem]'>
+          <HomeContentModule {...homeContentModuleProps} />
+        </Content>
 
-      <Footer className='z-[2] bg-transparent'>
-        <HomeFooterModule />
-      </Footer>
-    </Layout>
+        <Footer className='z-[2] bg-transparent'>
+          <HomeFooterModule />
+        </Footer>
+      </Layout>
+    </ConfigProvider>
   );
 };
