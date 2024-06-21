@@ -7,10 +7,12 @@ export const HomeContainer = () => {
         {
           imageUrl: "/assets/1.png",
           title: "Dark Mode",
+          route: "/dark",
         },
         {
           imageUrl: "/assets/2.png",
           title: "Light Mode",
+          route: "/light",
         },
       ],
       preferredTheme: "dark",

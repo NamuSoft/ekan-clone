@@ -5,6 +5,7 @@ type Props = {
   darkLightProps: Array<{
     imageUrl: string;
     title: string;
+    route: string;
   }>;
   preferredTheme: "light" | "dark";
 };
@@ -19,7 +20,7 @@ export const HomeContentModule = ({
         <h1 className='mb-[1rem] text-[4.375rem]'>GAVI</h1>
         <h4 className='text-3xl'>
           Creative Personal
-          <span className='text-main dark:text-mainDark ml-[0.25rem]'>
+          <span className='ml-[0.25rem] text-main dark:text-mainDark'>
             Portfolio
           </span>
           Template
