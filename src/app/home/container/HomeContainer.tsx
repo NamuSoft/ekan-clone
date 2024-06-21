@@ -15,7 +15,6 @@ export const HomeContainer = () => {
           route: "/light",
         },
       ],
-      preferredTheme: "dark",
     },
     linesAtomProps: { numberOfLines: 5 },
   };

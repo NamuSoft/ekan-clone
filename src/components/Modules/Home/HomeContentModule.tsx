@@ -1,5 +1,4 @@
 import { DarkLightPreviewComponent } from "~/components/Components/DarkLightPreviewComponent/DarkLightPreviewComponent";
-import { ThemeSwitchComponent } from "~/components/Components/ThemeSwitchComponent/ThemeSwitchComponent";
 
 type Props = {
   darkLightProps: Array<{
@@ -7,13 +6,9 @@ type Props = {
     title: string;
     route: string;
   }>;
-  preferredTheme: "light" | "dark";
 };
 
-export const HomeContentModule = ({
-  darkLightProps,
-  preferredTheme,
-}: Props) => {
+export const HomeContentModule = ({ darkLightProps }: Props) => {
   return (
     <div className='flex flex-col gap-[4.75rem] text-center text-black dark:text-white'>
       <div>
@@ -32,8 +27,6 @@ export const HomeContentModule = ({
           <DarkLightPreviewComponent key={content.title} {...content} />
         ))}
       </div>
-
-      <ThemeSwitchComponent preferredTheme={preferredTheme} />
     </div>
   );
 };

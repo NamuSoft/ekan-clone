@@ -4,7 +4,7 @@ type Props = {
 
 export function LinesAtom({ numberOfLines }: Props) {
   return (
-    <div className='bg-background dark:bg-backgroundDark pointer-events-none fixed left-0 top-0 flex h-screen w-full'>
+    <div className='pointer-events-none fixed left-0 top-0 flex h-screen w-full bg-[--secondary-color]'>
       {Array.from({ length: numberOfLines }).map((_, index) => {
         return (
           <span
