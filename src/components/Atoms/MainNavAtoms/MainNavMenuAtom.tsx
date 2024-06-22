@@ -20,7 +20,7 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
 
   return (
     <div>
-      <motion.nav
+      <motion.div
         initial='hidden'
         animate={isNavOpen ? "visible" : "hidden"}
         variants={variants}
@@ -28,7 +28,7 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
         className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20'
       >
         <MainNavMenuList />
-      </motion.nav>
+      </motion.div>
       <div className='hidden lg:block'>
         <ul className='flex'>
           <li className='mx-0.5 my-0 h-10 w-10 rounded-full border border-solid border-[--border2] text-center text-xs leading-10'>
