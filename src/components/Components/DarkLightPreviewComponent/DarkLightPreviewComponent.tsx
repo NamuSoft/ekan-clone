@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./DarkLightPreviewComponent.module.css";
-import Image from "next/image";
 
 type Props = {
   imageUrl: string;
