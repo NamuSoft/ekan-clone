@@ -39,13 +39,19 @@ export const MainTemplate = ({
     >
       <Layout
         style={{ height: "200vh" }}
-        className='m-auto overflow-x-hidden bg-[--background] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+        className='mx-auto w-full overflow-x-hidden bg-[--background] px-[0.75rem] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
       >
         <LoaderComponent />
         <CustomCursorAtom />
         <LinesAtom {...linesAtomProps} />
 
-        <Header className='relative z-50 bg-transparent py-[1.8rem]'>
+        <Header
+          className='z-[2] flex items-center bg-transparent'
+          style={{
+            paddingInline: 0,
+            paddingBlock: 50,
+          }}
+        >
           <MainHeaderModule />
         </Header>
 

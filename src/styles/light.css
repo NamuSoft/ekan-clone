@@ -1,8 +1,9 @@
 :root {
-  --background: #e6eaee;
+  --background: #ffffff;
   --text: #000000;
   --primary: #55e6a5;
   --neutral: #ffffff;
   --border: #0000000d;
+  --border2: #0000001a;
   --loader: #c6cfd8;
 }
