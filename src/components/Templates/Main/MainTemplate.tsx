@@ -9,8 +9,6 @@ import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderC
 import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
 import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
 
-import "~/styles/light.css";
-
 type Props = {
   buttonThemeProps: {
     defaultActiveBorderColor: string;
@@ -46,7 +44,7 @@ export const MainTemplate = ({
         <LinesAtom {...linesAtomProps} />
 
         <Header
-          className='z-[2] flex items-center bg-transparent'
+          className='z-50 flex items-center bg-transparent text-[--text]'
           style={{
             paddingInline: 0,
             paddingBlock: 50,
@@ -55,7 +53,7 @@ export const MainTemplate = ({
           <MainHeaderModule />
         </Header>
 
-        <Content className='z-[2]'>
+        <Content className='z-[2] text-[--text]'>
           <MainContentModules {...mainContentModuleProps} />
         </Content>
 

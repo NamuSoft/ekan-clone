@@ -1,5 +1,7 @@
 import { MainTemplate } from "~/components/Templates/Main/MainTemplate";
 
+import "~/styles/light.css";
+
 export const MainLightContainer = () => {
   const mainTemplateProps: React.ComponentProps<typeof MainTemplate> = {
     buttonThemeProps: {
