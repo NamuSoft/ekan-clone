@@ -6,6 +6,8 @@ import {
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
 
+import { MainNavMenuList } from "./MainNavMenuList";
+
 type Props = {
   isNavOpen: boolean;
 };
@@ -25,31 +27,7 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
         transition={{ type: "tween", ease: "easeInOut" }}
         className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20'
       >
-        <div className='flex justify-center'>
-          <ul className='py-5 text-center text-base uppercase'>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>Home</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>Services</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>About</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>portfolio</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>price</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>contact</a>
-            </li>
-            <li className='px-[1rem] py-2.5'>
-              <a href='#'>blog</a>
-            </li>
-          </ul>
-        </div>
+        <MainNavMenuList />
       </motion.nav>
       <div className='hidden lg:block'>
         <ul className='flex'>

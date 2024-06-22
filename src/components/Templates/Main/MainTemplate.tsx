@@ -10,6 +10,7 @@ import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderC
 
 import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
 import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
+import { MainHeroModule } from "~/components/Modules/Main/MainHeroModule";
 
 type Props = {
   buttonThemeProps: Partial<ComponentToken> & Partial<AliasToken>;
@@ -51,6 +52,7 @@ export const MainTemplate = ({
         </Header>
 
         <Content className='z-[2] text-[--text]'>
+          <MainHeroModule />
           <MainContentModules {...mainContentModuleProps} />
         </Content>
 
