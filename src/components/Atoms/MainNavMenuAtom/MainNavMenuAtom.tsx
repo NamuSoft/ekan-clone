@@ -3,7 +3,6 @@ import {
   DribbbleOutlined,
   GithubOutlined,
   LinkedinFilled,
-  LinkedinOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
 
