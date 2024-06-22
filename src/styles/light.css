@@ -2,11 +2,12 @@
   --background: #ffffff;
   --background2: #c6cfd8;
   --background3: #e6eaee;
+  --background4: #ffffff99;
   --text: #000000;
   --text2: #777;
   --text3: #444;
-  --primary: #55e6a5;
-  --neutral: #ffffff;
   --border: #0000000d;
   --border2: #0000001a;
+  --primary: #55e6a5;
+  --neutral: #ffffff;
 }

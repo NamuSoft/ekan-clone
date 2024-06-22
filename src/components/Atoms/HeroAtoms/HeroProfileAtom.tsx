@@ -17,6 +17,7 @@ export function HeroProfileAtom() {
               alt='profile'
               width={500}
               height={0}
+              style={{ width: "100%", height: "auto" }}
             />
             <span className='absolute -left-5 top-[2rem] flex h-10 w-10 rotate-[10deg] items-center justify-center rounded-xl backdrop-blur-[5px]'>
               <Image
