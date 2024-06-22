@@ -6,7 +6,7 @@
   padding: 6.25rem 3.125rem;
 }
 
-.item:before {
+.item::before {
   content: "";
   position: absolute;
   left: 0;
