@@ -53,25 +53,25 @@ export function HeroProfileAtom() {
           </div>
           <div className='mt-5 text-center'>
             <a
-              href='#'
+              href='#0'
               className='mx-0.5 my-0 inline-block h-11 w-11 rounded-[0.5rem] border border-solid border-[--border] text-center text-xs leading-[2.75rem] transition-all duration-[0.4s]'
             >
               <BehanceOutlined />
             </a>
             <a
-              href='#'
+              href='#0'
               className='mx-0.5 my-0 inline-block h-11 w-11 rounded-[0.5rem] border border-solid border-[--border] text-center text-xs leading-[2.75rem] transition-all duration-[0.4s]'
             >
               <GithubOutlined />
             </a>
             <a
-              href='#'
+              href='#0'
               className='mx-0.5 my-0 inline-block h-11 w-11 rounded-[0.5rem] border border-solid border-[--border] text-center text-xs leading-[2.75rem] transition-all duration-[0.4s]'
             >
               <LinkedinFilled />
             </a>
             <a
-              href='#'
+              href='#0'
               className='mx-0.5 my-0 inline-block h-11 w-11 rounded-[0.5rem] border border-solid border-[--border] text-center text-xs leading-[2.75rem] transition-all duration-[0.4s]'
             >
               <DribbbleOutlined />

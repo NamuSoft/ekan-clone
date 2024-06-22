@@ -32,22 +32,22 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
       <div className='hidden lg:block'>
         <ul className='flex'>
           <li className='mx-0.5 my-0 h-10 w-10 rounded-full border border-solid border-[--border2] text-center text-xs leading-10'>
-            <a href='#'>
+            <a href='#0'>
               <BehanceOutlined />
             </a>
           </li>
           <li className='mx-0.5 my-0 h-10 w-10 rounded-full border border-solid border-[--border2] text-center text-xs leading-10'>
-            <a href='#'>
+            <a href='#0'>
               <GithubOutlined />
             </a>
           </li>
           <li className='mx-0.5 my-0 h-10 w-10 rounded-full border border-solid border-[--border2] text-center text-xs leading-10'>
-            <a href='#'>
+            <a href='#0'>
               <LinkedinFilled />
             </a>
           </li>
           <li className='mx-0.5 my-0 h-10 w-10 rounded-full border border-solid border-[--border2] text-center text-xs leading-10'>
-            <a href='#'>
+            <a href='#0'>
               <DribbbleOutlined />
             </a>
           </li>
