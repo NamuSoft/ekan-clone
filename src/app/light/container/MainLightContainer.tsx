@@ -9,6 +9,7 @@ export const MainLightContainer = () => {
       defaultActiveColor: "#ffffff",
       defaultHoverBorderColor: "#000000",
       defaultHoverColor: "#ffffff",
+      defaultHoverBg: "#000000",
     },
     linesAtomProps: { numberOfLines: 5 },
     mainContentModuleProps: {

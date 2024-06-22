@@ -1,0 +1,58 @@
+@media screen and (min-width: 1000px) {
+  .ball {
+    position: relative;
+    display: inline-block;
+    padding: 0 1.25rem;
+    border: 1px solid var(--border);
+  }
+
+  .ball::after,
+  .ball::before {
+    position: absolute;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--text3);
+    pointer-events: none;
+  }
+
+  .ball::before {
+    top: -0.25rem;
+    left: -0.25rem;
+  }
+
+  .ball::after {
+    top: -0.25rem;
+    right: -0.25rem;
+  }
+
+  .ball i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .ball i::before,
+  .ball i::after {
+    position: absolute;
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--text3);
+  }
+
+  .ball i::before {
+    bottom: -0.25rem;
+    left: -0.25rem;
+  }
+
+  .ball i::after {
+    bottom: -0.25rem;
+    right: -0.25rem;
+  }
+}

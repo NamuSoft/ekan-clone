@@ -1,9 +1,13 @@
+import { MainHeroComponent } from "~/components/Components/MainHeroComponent/MainHeroComponent";
+
 type Props = {
   preferredTheme: "light" | "dark";
 };
 
 export const MainContentModules = ({ preferredTheme }: Props) => {
   return (
-    <div className='flex flex-col gap-[4.75rem] text-center text-[--text]'></div>
+    <div>
+      <MainHeroComponent />
+    </div>
   );
 };

@@ -1,5 +1,7 @@
 import { ConfigProvider, Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
+import { type ComponentToken } from "antd/es/button/style";
+import { type AliasToken } from "antd/es/theme/internal";
 
 import { MainContentModules } from "~/components/Modules/Main/MainContentModules";
 import { MainHeaderModule } from "~/components/Modules/Main/MainHeaderModule";
@@ -10,12 +12,7 @@ import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCurs
 import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
 
 type Props = {
-  buttonThemeProps: {
-    defaultActiveBorderColor: string;
-    defaultActiveColor: string;
-    defaultHoverBorderColor: string;
-    defaultHoverColor: string;
-  };
+  buttonThemeProps: Partial<ComponentToken> & Partial<AliasToken>;
   linesAtomProps: React.ComponentProps<typeof LinesAtom>;
   mainContentModuleProps: React.ComponentProps<typeof MainContentModules>;
 };
