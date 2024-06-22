@@ -5,7 +5,7 @@ import styles from "./LoaderComponent.module.css";
 export function LoaderComponent() {
   return (
     <motion.div
-      className='fixed inset-0 z-[9999] my-auto flex h-[100vh] items-center justify-center bg-[--loader]'
+      className='fixed inset-0 z-[9999] my-auto flex h-[100vh] items-center justify-center bg-[--background2]'
       initial={{ translateY: 0 }}
       animate={{ translateY: -10000 }}
       exit={{ translateY: 0 }}

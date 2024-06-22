@@ -23,7 +23,7 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
         animate={isNavOpen ? "visible" : "hidden"}
         variants={variants}
         transition={{ type: "tween", ease: "easeInOut" }}
-        className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--loader] pb-10 pt-20'
+        className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20'
       >
         <div className='flex justify-center'>
           <ul className='py-5 text-center text-base uppercase'>
