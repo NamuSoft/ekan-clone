@@ -10,14 +10,12 @@ type Props = {
 
 export const HomeContentModule = ({ darkLightProps }: Props) => {
   return (
-    <div className='flex flex-col gap-[4.75rem] text-center text-black dark:text-white'>
+    <div className='flex flex-col gap-[4.75rem] text-center text-[--text]'>
       <div>
         <h1 className='mb-[1rem] text-[4.375rem]'>GAVI</h1>
         <h4 className='text-3xl'>
           Creative Personal
-          <span className='ml-[0.25rem] text-main dark:text-mainDark'>
-            Portfolio
-          </span>
+          <span className='ml-[0.25rem] text-[--primary]'>Portfolio</span>
           Template
         </h4>
       </div>

@@ -8,7 +8,7 @@ export function NavBarComponent() {
       <LogoAtom />
       <Button
         type='default'
-        className='pointer-events-auto hidden bg-transparent px-[2rem] py-[1.5rem] text-black lg:flex dark:text-white'
+        className='pointer-events-auto hidden bg-transparent px-[2rem] py-[1.5rem] text-[--text] lg:flex'
       >
         Buy Now
       </Button>

@@ -49,7 +49,7 @@ export function ProgressAtom() {
           ref={pathRef}
           d='M22,2 a20,20 0 1,1 0,40 a20,20 0 1,1 0,-40'
           fill='transparent'
-          className='stroke-black dark:stroke-white'
+          className='stroke-[--text]'
           strokeWidth={2}
           strokeDasharray={pathLength}
           style={{ strokeDashoffset }}

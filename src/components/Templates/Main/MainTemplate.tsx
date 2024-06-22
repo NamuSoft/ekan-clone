@@ -1,15 +1,20 @@
 import { ConfigProvider, Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 
-import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
-import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderComponent";
-import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
 import { MainContentModules } from "~/components/Modules/Main/MainContentModules";
 import { MainHeaderModule } from "~/components/Modules/Main/MainHeaderModule";
+
+import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderComponent";
+
+import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
+import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
+
+import "~/styles/light.css";
 
 type Props = {
   buttonThemeProps: {
     defaultActiveBorderColor: string;
+    defaultActiveColor: string;
     defaultHoverBorderColor: string;
     defaultHoverColor: string;
   };
@@ -33,8 +38,8 @@ export const MainTemplate = ({
       }}
     >
       <Layout
-        style={{ height: "100vh" }}
-        className='m-auto overflow-x-hidden bg-background font-sora dark:bg-backgroundDark sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
+        style={{ height: "200vh" }}
+        className='m-auto overflow-x-hidden bg-[--background] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
       >
         <LoaderComponent />
         <CustomCursorAtom />
@@ -44,7 +49,7 @@ export const MainTemplate = ({
           <MainHeaderModule />
         </Header>
 
-        <Content>
+        <Content className='z-[2]'>
           <MainContentModules {...mainContentModuleProps} />
         </Content>
 

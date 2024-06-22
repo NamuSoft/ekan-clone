@@ -7,6 +7,11 @@
   /* outline: 1px solid yellow; */
 }
 
+body {
+  position: relative;
+  /* overflow-x: hidden !important; */
+}
+
 body:before {
   content: "";
   position: absolute;
@@ -21,27 +26,4 @@ body:before {
   pointer-events: none;
   opacity: 0.5;
   z-index: 1;
-}
-
-.customcursor {
-  position: absolute;
-  z-index: 99999;
-  border-radius: 50%;
-  padding: 0.3rem;
-  background-color: #fff;
-  mix-blend-mode: difference;
-  transition: opacity 0.4s ease;
-  transition: transform 0.3s ease;
-  pointer-events: none;
-}
-
-@keyframes cursorAnim {
-  to {
-    transform: scale(8);
-    opacity: 0.1;
-  }
-}
-
-.expand {
-  animation: cursorAnim 0.5s forwards;
 }

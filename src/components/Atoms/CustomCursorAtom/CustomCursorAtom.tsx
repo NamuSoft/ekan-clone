@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+import "./cursor.css";
+
 export function CustomCursorAtom() {
   const cursorRef = useRef<HTMLDivElement>(null);
 
@@ -39,5 +41,5 @@ export function CustomCursorAtom() {
     };
   }, []);
 
-  return <div className='customcursor' ref={cursorRef} />;
+  return <div className='cursorcustom' ref={cursorRef} />;
 }
