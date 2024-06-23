@@ -1,3 +1,4 @@
+import { features } from "process";
 import { MainTemplate } from "~/components/Templates/Main/MainTemplate";
 
 import "~/styles/light.css";
@@ -112,6 +113,43 @@ export const MainLightContainer = () => {
             {
               imageUrl: "/assets/portfolio2.jpg",
               title: "Luxury Modern Website",
+            },
+          ],
+        },
+      },
+      mainPricingComponent: {
+        pricingOptionAtomProps: {
+          options: [
+            {
+              title: "Basic",
+              price: 19,
+              features: [
+                "Need your wireframe",
+                "Design with Figma, Framer",
+                "Implement with Webflow, React, WordPress, Laravel/PHP",
+                "Support 6 months",
+              ],
+            },
+            {
+              title: "Popular",
+              price: 39,
+              features: [
+                "Need your wireframe",
+                "Design with Figma, Framer",
+                "Implement with Webflow, React, WordPress, Laravel/PHP",
+                "Support 6 months",
+                "Your project always be priority",
+              ],
+            },
+            {
+              title: "Premium",
+              price: 59,
+              features: [
+                "Need your wireframe",
+                "Design with Figma, Framer",
+                "Implement with Webflow, React, WordPress, Laravel/PHP",
+                "Support 6 months",
+              ],
             },
           ],
         },

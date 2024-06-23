@@ -9,7 +9,10 @@ type Props = {
 
 export function MainPortfolioComponent({ portfolioWorkAtomProps }: Props) {
   return (
-    <div className='rounded-[0_0_2rem_0] bg-[--background3] px-4 py-24 lg:px-12'>
+    <div
+      className='rounded-[0_0_2rem_0] bg-[--background3] px-4 py-24 lg:px-12'
+      data-scroll-index='3'
+    >
       <PortfolioHeaderAtom />
       <PortfolioWorkAtom {...portfolioWorkAtomProps} />
     </div>
