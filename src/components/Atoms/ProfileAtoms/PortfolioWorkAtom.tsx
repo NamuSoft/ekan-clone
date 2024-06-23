@@ -22,7 +22,7 @@ export function PortfolioWorkAtom({ portfolios }: Props) {
             className={`mt-12 ${styles.portfolio}`}
             initial={{ opacity: 0, transform: "translate3d(0, 100%, 0)" }}
             whileInView={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
-            transition={{ ease: "linear", delay: 0.2 }}
+            transition={{ ease: "linear", duration: 1.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <div className={styles.img}>

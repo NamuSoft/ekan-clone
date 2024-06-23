@@ -22,7 +22,7 @@ export function ServicesInsightsAtom({ insights }: Props) {
             className={`flow flex-row-item services relative mb-7 px-7 py-10 ${styles.services}`}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: "linear" }}
+            transition={{ ease: "linear", duration: 2 }}
             viewport={{ once: true }}
           >
             <span className='relative z-[1] inline-block w-16 opacity-70'>

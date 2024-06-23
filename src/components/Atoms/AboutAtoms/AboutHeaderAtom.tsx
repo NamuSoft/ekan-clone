@@ -6,7 +6,7 @@ export function AboutHeaderAtom() {
       className='flow self-center'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ ease: "linear", delay: 0.2 }}
+      transition={{ ease: "linear", duration: 1.5, delay: 0.2 }}
       viewport={{ once: true }}
     >
       <h6 className='uppercase tracking-wide opacity-70'>Our Skills</h6>

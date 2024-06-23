@@ -6,7 +6,7 @@ export function ServicesHeaderAtom() {
       className='mb-20'
       initial={{ opacity: 0, transform: "translate3d(0, 100%, 0)" }}
       whileInView={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
-      transition={{ ease: "linear" }}
+      transition={{ ease: "linear", duration: 2 }}
       viewport={{ once: true }}
     >
       <div className='flex justify-center'>

@@ -39,7 +39,7 @@ export function AboutSkillAtom({ skills }: Prop) {
                 className='absolute left-0 top-0 inline-block h-full bg-[--text] transition-all duration-[1.5s]'
                 initial={{ width: 0 }}
                 whileInView={{ width: `${progress}%` }}
-                transition={{ ease: "linear", delay: 0.2 }}
+                transition={{ ease: "linear", duration: 2, delay: 0.2 }}
                 viewport={{ once: true }}
               />
             </div>

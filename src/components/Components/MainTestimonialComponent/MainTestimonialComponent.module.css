@@ -1,0 +1,56 @@
+.testimonials {
+  position: relative;
+  z-index: 3;
+  background-color: var(--background3);
+  padding-inline: 1rem;
+  padding-block: 6rem;
+}
+
+.testimonials:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../../../public/assets/noise1.png");
+  background-size: auto;
+  background-repeat: repeat;
+  border-radius: 1.875rem 0 0 1.875rem;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.testimonials:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--neutral);
+  border-radius: 1.875rem 0 0 1.875rem;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .testimonials {
+    padding-block: 3rem;
+  }
+  .testimonials::after {
+    left: 3.125rem;
+  }
+  .testimonials::before {
+    left: 3.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials::after {
+    left: 2.5rem;
+  }
+  .testimonials::before {
+    left: 2.5rem;
+  }
+}
