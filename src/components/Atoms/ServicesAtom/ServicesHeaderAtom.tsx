@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 export function ServicesHeaderAtom() {
   return (
-    <div className='mb-20'>
+    <motion.div
+      className='mb-20'
+      initial={{ opacity: 0, transform: "translate3d(0, 100%, 0)" }}
+      whileInView={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+      transition={{ ease: "linear" }}
+      viewport={{ once: true }}
+    >
       <div className='flex justify-center'>
         <div className='flow px-4 text-center lg:w-1/2'>
           <h6 className='sub-title uppercase tracking-[2px] opacity-70'>
@@ -15,6 +23,6 @@ export function ServicesHeaderAtom() {
           </h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

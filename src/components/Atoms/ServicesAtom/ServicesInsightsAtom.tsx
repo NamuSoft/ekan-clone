@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import styles from "./ServicesInsightsAtom.module.css";
 
@@ -16,9 +17,13 @@ export function ServicesInsightsAtom({ insights }: Props) {
       {insights.map((service) => {
         const { imageUrl, description, title } = service;
         return (
-          <div
+          <motion.div
             key={title}
             className={`flow flex-row-item services relative mb-7 px-7 py-10 ${styles.services}`}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "linear" }}
+            viewport={{ once: true }}
           >
             <span className='relative z-[1] inline-block w-16 opacity-70'>
               <Image
@@ -32,7 +37,7 @@ export function ServicesInsightsAtom({ insights }: Props) {
             <h6 className='relative z-[1] uppercase tracking-wide'>{title}</h6>
             <p className='relative z-[1]'>{description}</p>
             <div className={styles.bord} />
-          </div>
+          </motion.div>
         );
       })}
     </div>

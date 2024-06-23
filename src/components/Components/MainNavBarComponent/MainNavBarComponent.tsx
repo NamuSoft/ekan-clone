@@ -7,10 +7,14 @@ import { MainNavToggle } from "~/components/Atoms/MainNavAtoms/MainNavToggle";
 export function MainNavBarComponent() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const handleCloseNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <div className='flex flex-1 items-center justify-between'>
       <LogoAtom />
-      <MainNavMenuAtom isNavOpen={isNavOpen} />
+      <MainNavMenuAtom isNavOpen={isNavOpen} closeNav={handleCloseNav} />
       <MainNavToggle setNav={setIsNavOpen} />
     </div>
   );

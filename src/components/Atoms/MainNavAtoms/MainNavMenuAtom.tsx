@@ -10,9 +10,10 @@ import { MainNavMenuList } from "./MainNavMenuList";
 
 type Props = {
   isNavOpen: boolean;
+  closeNav: () => void;
 };
 
-export function MainNavMenuAtom({ isNavOpen }: Props) {
+export function MainNavMenuAtom({ isNavOpen, closeNav }: Props) {
   const variants = {
     hidden: { y: "-100%", opacity: 0 },
     visible: { y: 0, opacity: 1 },
@@ -27,7 +28,7 @@ export function MainNavMenuAtom({ isNavOpen }: Props) {
         transition={{ type: "tween", ease: "easeInOut" }}
         className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20'
       >
-        <MainNavMenuList />
+        <MainNavMenuList closeNav={closeNav} />
       </motion.div>
       <div className='hidden lg:block'>
         <ul className='flex'>

@@ -68,6 +68,31 @@ export const MainLightContainer = () => {
             },
           ],
         },
+        awardAtomProp: {
+          awards: [
+            {
+              serial: 0o1,
+              year: 2019,
+              imageUrl: "/assets/award1.png",
+              title: "02x Designer Award",
+              accolade: "NOMINEE",
+            },
+            {
+              serial: 0o2,
+              year: 2020,
+              imageUrl: "/assets/award2.png",
+              title: "02x Designer Award",
+              accolade: "WINNER",
+            },
+            {
+              serial: 0o3,
+              year: 2021,
+              imageUrl: "/assets/award2.png",
+              title: "02x Designer Award",
+              accolade: "RUNNERS UP",
+            },
+          ],
+        },
       },
     },
   };

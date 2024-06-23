@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Prop = {
   skills: Array<{
@@ -34,9 +35,12 @@ export function AboutSkillAtom({ skills }: Prop) {
               </div>
             </div>
             <div className='relative h-[0.25rem] bg-[--border2]'>
-              <span
+              <motion.span
                 className='absolute left-0 top-0 inline-block h-full bg-[--text] transition-all duration-[1.5s]'
-                style={{ width: `${progress}%` }}
+                initial={{ width: 0 }}
+                whileInView={{ width: `${progress}%` }}
+                transition={{ ease: "linear", delay: 0.2 }}
+                viewport={{ once: true }}
               />
             </div>
             <span className='absolute right-2.5 top-2.5 inline-block rounded-[2rem] border border-solid border-[--border3] px-2.5 py-[0.25rem] text-xs'>

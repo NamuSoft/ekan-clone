@@ -3,7 +3,7 @@ import { ProfileInfoAtom } from "~/components/Atoms/HeroAtoms/ProfileInfoAtom";
 
 export function MainHeroComponent() {
   return (
-    <div className='flex flex-wrap' data-scroll-index='1'>
+    <div className='flex flex-wrap'>
       <HeroProfileAtom />
       <ProfileInfoAtom />
     </div>
