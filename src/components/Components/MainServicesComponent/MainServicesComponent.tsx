@@ -10,7 +10,7 @@ type Props = {
 export function MainServicesComponent({ servicesInsightsAtomProps }: Props) {
   return (
     <div
-      className='mt-12 rounded-[1rem_1rem_0_0] bg-[--background3] px-4 py-24 lg:mt-0 lg:rounded-[1rem_0_0_0] lg:px-12'
+      className='mt-12 rounded-[1rem_1rem_0_0] border-b border-solid border-b-[--border2] bg-[--background3] px-4 py-24 lg:mt-0 lg:rounded-[1rem_0_0_0] lg:px-12'
       data-scroll-index='1'
     >
       <ServicesHeaderAtom />

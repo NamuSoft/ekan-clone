@@ -43,6 +43,32 @@ export const MainLightContainer = () => {
           ],
         },
       },
+      mainAboutComponent: {
+        aboutSkillAtomProp: {
+          skills: [
+            {
+              imageUrl: "/assets/skill1.png",
+              title: "UI / UX Design",
+              progress: 95,
+            },
+            {
+              imageUrl: "/assets/skill2.png",
+              title: "Development",
+              progress: 90,
+            },
+            {
+              imageUrl: "/assets/skill3.png",
+              title: "Graphic Design",
+              progress: 85,
+            },
+            {
+              imageUrl: "/assets/skill4.png",
+              title: "WordPress",
+              progress: 78,
+            },
+          ],
+        },
+      },
     },
   };
 
