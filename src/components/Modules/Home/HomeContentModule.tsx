@@ -1,14 +1,14 @@
 import { DarkLightPreviewComponent } from "~/components/Components/DarkLightPreviewComponent/DarkLightPreviewComponent";
 
 type Props = {
-  darkLightProps: Array<{
-    imageUrl: string;
-    title: string;
-    route: string;
-  }>;
+  darkLightPreviewComponentProps: React.ComponentProps<
+    typeof DarkLightPreviewComponent
+  >;
 };
 
-export const HomeContentModule = ({ darkLightProps }: Props) => {
+export const HomeContentModule = ({
+  darkLightPreviewComponentProps,
+}: Props) => {
   return (
     <div className='flex flex-col gap-[4.75rem] text-center text-[--text]'>
       <div>
@@ -19,12 +19,7 @@ export const HomeContentModule = ({ darkLightProps }: Props) => {
           Template
         </h4>
       </div>
-
-      <div className='flex flex-col gap-[1.5rem] lg:flex-row'>
-        {darkLightProps.map((content) => (
-          <DarkLightPreviewComponent key={content.title} {...content} />
-        ))}
-      </div>
+      <DarkLightPreviewComponent {...darkLightPreviewComponentProps} />
     </div>
   );
 };

@@ -1,5 +1,10 @@
-import { features } from "process";
 import { MainTemplate } from "~/components/Templates/Main/MainTemplate";
+import {
+  utilityModulesProps,
+  mainHeaderModuleProps,
+  mainTopNavigationComponent,
+  mainHeroModuleProps,
+} from "~/data";
 
 import "~/styles/light.css";
 
@@ -12,8 +17,11 @@ export const MainLightContainer = () => {
       defaultHoverColor: "#ffffff",
       defaultHoverBg: "#000000",
     },
-    linesAtomProps: { numberOfLines: 5 },
+    utilityModulesProps,
+    mainHeaderModuleProps,
+    mainHeroModuleProps,
     mainContentModuleProps: {
+      mainTopNavigationComponent,
       mainServicesComponent: {
         servicesInsightsAtomProps: {
           insights: [

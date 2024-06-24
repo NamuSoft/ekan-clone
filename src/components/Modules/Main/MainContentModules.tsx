@@ -1,5 +1,3 @@
-import React from "react";
-
 import { MainAboutComponent } from "~/components/Components/MainOurSkillsComponent/MainAboutComponent";
 import { MainPortfolioComponent } from "~/components/Components/MainPortfolioComponent/MainPortfolioComponent";
 import { MainPricingComponent } from "~/components/Components/MainPrcingComponent/MainPricingComponent";
@@ -12,6 +10,9 @@ type Props = {
   mainAboutComponent: React.ComponentProps<typeof MainAboutComponent>;
   mainPortfolioComponent: React.ComponentProps<typeof MainPortfolioComponent>;
   mainPricingComponent: React.ComponentProps<typeof MainPricingComponent>;
+  mainTopNavigationComponent: React.ComponentProps<
+    typeof MainTopNavigationComponent
+  >;
 };
 
 export const MainContentModules = ({
@@ -19,10 +20,11 @@ export const MainContentModules = ({
   mainAboutComponent,
   mainPortfolioComponent,
   mainPricingComponent,
+  mainTopNavigationComponent,
 }: Props) => {
   return (
     <div>
-      <MainTopNavigationComponent />
+      <MainTopNavigationComponent {...mainTopNavigationComponent} />
       <MainServicesComponent {...mainServicesComponent} />
       <MainAboutComponent {...mainAboutComponent} />
       <MainPortfolioComponent {...mainPortfolioComponent} />

@@ -1,5 +1,15 @@
-import { MainHeroComponent } from "~/components/Components/MainHeroComponent/MainHeroComponent";
+import { HeroProfileComponent } from "~/components/Components/HeroProfileComponent/HeroProfileComponent";
+import { ProfileInfoComponent } from "~/components/Components/ProfileInfoComponent/ProfileInfoComponent";
 
-export const MainHeroModule = () => {
-  return <MainHeroComponent />;
+type Props = {
+  heroProfileComponentProps: React.ComponentProps<typeof HeroProfileComponent>;
+};
+
+export const MainHeroModule = ({ heroProfileComponentProps }: Props) => {
+  return (
+    <div className='flex flex-wrap'>
+      <HeroProfileComponent {...heroProfileComponentProps} />
+      <ProfileInfoComponent />
+    </div>
+  );
 };

@@ -4,24 +4,24 @@ import { type ComponentToken } from "antd/es/button/style";
 import { type AliasToken } from "antd/es/theme/internal";
 
 import { MainContentModules } from "~/components/Modules/Main/MainContentModules";
-import { MainHeaderModule } from "~/components/Modules/Main/MainHeaderModule";
-
-import { LoaderComponent } from "~/components/Components/LoaderComponent/LoaderComponent";
-
-import { CustomCursorAtom } from "~/components/Atoms/CustomCursorAtom/CustomCursorAtom";
-import { LinesAtom } from "~/components/Atoms/LinesAtom/LinesAtom";
+import { MainHeaderModule } from "~/components/Modules/Header/MainHeaderModule";
 import { MainHeroModule } from "~/components/Modules/Main/MainHeroModule";
+import { UtilityModules } from "~/components/Modules/UtilityModules/UtilityModules";
 
 type Props = {
   buttonThemeProps: Partial<ComponentToken> & Partial<AliasToken>;
-  linesAtomProps: React.ComponentProps<typeof LinesAtom>;
   mainContentModuleProps: React.ComponentProps<typeof MainContentModules>;
+  mainHeaderModuleProps: React.ComponentProps<typeof MainHeaderModule>;
+  utilityModulesProps: React.ComponentProps<typeof UtilityModules>;
+  mainHeroModuleProps: React.ComponentProps<typeof MainHeroModule>;
 };
 
 export const MainTemplate = ({
   buttonThemeProps,
-  linesAtomProps,
+  utilityModulesProps,
   mainContentModuleProps,
+  mainHeaderModuleProps,
+  mainHeroModuleProps,
 }: Props) => {
   return (
     <ConfigProvider
@@ -37,9 +37,7 @@ export const MainTemplate = ({
         style={{ height: "100%" }}
         className='mx-auto w-full overflow-x-hidden bg-[--background] px-[0.75rem] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
       >
-        <LoaderComponent />
-        <CustomCursorAtom />
-        <LinesAtom {...linesAtomProps} />
+        <UtilityModules {...utilityModulesProps} />
 
         <Header
           className='z-50 flex items-center bg-transparent text-[--text]'
@@ -48,11 +46,11 @@ export const MainTemplate = ({
             paddingBlock: 50,
           }}
         >
-          <MainHeaderModule />
+          <MainHeaderModule {...mainHeaderModuleProps} />
         </Header>
 
         <Content className='z-[2] text-[--text]'>
-          <MainHeroModule />
+          <MainHeroModule {...mainHeroModuleProps} />
           <MainContentModules {...mainContentModuleProps} />
         </Content>
 

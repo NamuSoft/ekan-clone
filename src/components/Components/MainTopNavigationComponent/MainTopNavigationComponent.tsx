@@ -1,9 +1,15 @@
-import { MainNavMenuList } from "~/components/Atoms/MainNavAtoms/MainNavMenuList";
+import { NavMenuListComponent } from "../NavMenuListComponent/NavMenuListComponent";
 
-export function MainTopNavigationComponent() {
+type Props = {
+  navMenuListComponentProps: React.ComponentProps<typeof NavMenuListComponent>;
+};
+
+export function MainTopNavigationComponent({
+  navMenuListComponentProps,
+}: Props) {
   return (
     <div className='hidden lg:relative lg:mt-12 lg:block lg:p-0 '>
-      <MainNavMenuList />
+      <NavMenuListComponent {...navMenuListComponentProps} />
     </div>
   );
 }
