@@ -8,7 +8,7 @@ type Props = {
   linesComponentProps: React.ComponentProps<typeof LinesComponent>;
 };
 
-export function UtilityModules(props: Props) {
+export function MainUtilityModules(props: Props) {
   return (
     <>
       <LoaderComponent />

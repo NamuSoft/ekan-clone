@@ -28,7 +28,7 @@ export const MainLightContainer = () => {
       hoverBorderColor: "none",
       activeBorderColor: "black",
     },
-    utilityModulesProps,
+    mainUtilityModulesProps: utilityModulesProps,
     mainHeaderModuleProps,
     mainHeroModuleProps,
     mainServicesModuleProps,

@@ -1,5 +1,6 @@
-import clsx from "clsx";
 import Image from "next/image";
+
+import "./custom.css";
 
 type Props = {
   width: number;
@@ -11,10 +12,7 @@ type Props = {
 export function ImageIconAtom(props: Props) {
   return (
     <span
-      className={clsx(
-        "absolute flex h-10 w-10 rotate-[10deg] items-center justify-center rounded-xl backdrop-blur-[5px]",
-        props.className
-      )}
+      className={`absolute flex h-10 w-10 rotate-[10deg] items-center justify-center rounded-xl backdrop-blur-[5px] ${props.className}`}
     >
       <Image
         src={props.imageUrl}

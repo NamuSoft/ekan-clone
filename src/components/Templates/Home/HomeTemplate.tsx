@@ -4,11 +4,11 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { HomeFooterModule } from "~/components/Modules/Footer/HomeFooterModule";
 import { HomeHeaderModule } from "~/components/Modules/Header/HomeHeaderModule";
-import { UtilityModules } from "~/components/Modules/Utility/UtilityModules";
+import { HomeUtilityModules } from "~/components/Modules/Utility/HomeUtilityModules";
 
 type Props = {
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
-  utilityModulesProps: React.ComponentProps<typeof UtilityModules>;
+  homeUtilityModulesProps: React.ComponentProps<typeof HomeUtilityModules>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -29,7 +29,7 @@ export const HomeTemplate = (props: Props) => {
         style={{ height: "100%" }}
         className='m-auto overflow-x-hidden bg-[--background] font-sora sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1280px]'
       >
-        <UtilityModules {...props.utilityModulesProps} />
+        <HomeUtilityModules {...props.homeUtilityModulesProps} />
 
         <Header className='relative z-50 bg-transparent py-[1.8rem]'>
           <HomeHeaderModule />

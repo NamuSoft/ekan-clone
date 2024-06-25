@@ -95,24 +95,24 @@ export const mainTopNavigationComponent = {
 export const mainHeroModuleProps = {
   heroProfileComponentProps: {
     iconOverlayComponentProps: {
-      icons: [
+      Icons: [
         {
           width: 24,
           height: 24,
           imageUrl: "/assets/icon1.png",
-          className: "-left-5 top-[2rem]",
+          className: "icon1",
         },
         {
           width: 24,
           height: 24,
           imageUrl: "/assets/icon2.png",
-          className: "-right-5 top-[40%]",
+          className: "icon2",
         },
         {
           width: 24,
           height: 24,
           imageUrl: "/assets/icon3.png",
-          className: "left-5 bottom-8",
+          className: "icon3",
         },
       ],
     },
