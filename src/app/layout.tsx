@@ -1,5 +1,4 @@
 import "~/styles/globals.css";
-import { Providers } from "./providers";
 
 export const metadata = {
   title: "Create T3 App",
@@ -13,10 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='font-sora' suppressHydrationWarning>
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+    <html lang='en' className='font-sora'>
+      <body>{children}</body>
     </html>
   );
 }
