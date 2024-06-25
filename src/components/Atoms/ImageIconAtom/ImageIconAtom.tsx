@@ -8,15 +8,20 @@ type Props = {
   className?: string;
 };
 
-export function IconAtom({ width, height, imageUrl, className }: Props) {
+export function ImageIconAtom(props: Props) {
   return (
     <span
       className={clsx(
         "absolute flex h-10 w-10 rotate-[10deg] items-center justify-center rounded-xl backdrop-blur-[5px]",
-        className
+        props.className
       )}
     >
-      <Image src={imageUrl} alt='' width={width} height={height} />
+      <Image
+        src={props.imageUrl}
+        alt=''
+        width={props.width}
+        height={props.height}
+      />
     </span>
   );
 }

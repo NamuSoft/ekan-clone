@@ -5,10 +5,10 @@ type Props = {
   insights: Array<React.ComponentProps<typeof InsightsAtom>>;
 };
 
-export function ServicesInsightsComponent({ insights }: Props) {
+export function ServicesInsightsComponent(props: Props) {
   return (
     <div className='grid gap-4 md:grid-cols-[repeat(2,1fr)]'>
-      {insights.map((service) => (
+      {props.insights.map((service) => (
         <FadeInAtom key={service.title}>
           <InsightsAtom {...service} />
         </FadeInAtom>

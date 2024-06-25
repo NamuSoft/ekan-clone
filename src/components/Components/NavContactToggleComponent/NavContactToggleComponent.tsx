@@ -2,12 +2,12 @@ type Props = {
   onClick: () => void;
 };
 
-export function NavContactToggleComponent({ onClick }: Props) {
+export function NavContactToggleComponent(props: Props) {
   return (
     <div>
       <div
         className='relative z-[1] cursor-pointer text-[3rem] lg:hidden'
-        onClick={onClick}
+        onClick={props.onClick}
       >
         <span className="inline-block font-[normal] normal-case not-italic leading-none before:content-['\2261']" />
       </div>

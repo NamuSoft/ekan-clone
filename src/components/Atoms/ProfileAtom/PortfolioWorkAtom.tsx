@@ -8,13 +8,13 @@ type Props = {
   title: string;
 };
 
-export function PortfolioWorkAtom({ imageUrl, title }: Props) {
+export function PortfolioWorkAtom(props: Props) {
   return (
     <div className={styles.portfolio}>
       <div className={styles.img}>
         <Link href='#'>
           <Image
-            src={imageUrl}
+            src={props.imageUrl}
             alt=''
             width={500}
             height={0}
@@ -32,7 +32,7 @@ export function PortfolioWorkAtom({ imageUrl, title }: Props) {
             Branding
           </span>
           <h5 className='text-lg font-medium leading-[1]'>
-            <Link href='#'>{title}</Link>
+            <Link href='#'>{props.title}</Link>
           </h5>
         </div>
       </div>

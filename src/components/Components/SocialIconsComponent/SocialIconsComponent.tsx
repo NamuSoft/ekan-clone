@@ -13,10 +13,10 @@ type Props = {
   className?: string;
 };
 
-export function SocialsComponent({ socialLinks, className }: Props) {
+export function SocialIconsComponent(props: Props) {
   return (
     <ul className='flex'>
-      {socialLinks.map((social, index) => {
+      {props.socialLinks.map((social, index) => {
         const { iconName, link } = social;
         return (
           <li key={`${iconName}-${index}`} className={`mx-0.5 my-0`}>
@@ -24,7 +24,7 @@ export function SocialsComponent({ socialLinks, className }: Props) {
               <div
                 className={clsx(
                   `flex h-10 w-10 items-center justify-center rounded-full border border-solid border-[--border2] text-center`,
-                  className
+                  props.className
                 )}
               >
                 <SVGAtom iconName={iconName} width={12} height={12} />

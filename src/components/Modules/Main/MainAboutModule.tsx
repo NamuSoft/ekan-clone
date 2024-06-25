@@ -8,10 +8,7 @@ type Props = {
   awardsComponentProps: React.ComponentProps<typeof AwardsComponent>;
 };
 
-export function MainAboutModule({
-  aboutSkillComponentProps,
-  awardsComponentProps,
-}: Props) {
+export function MainAboutModule(props: Props) {
   return (
     <div
       className='border-b border-solid border-b-[--border2] bg-[--background3] px-4 py-24 lg:px-12'
@@ -24,9 +21,9 @@ export function MainAboutModule({
             <span className='text-[--primary]'>Awards</span> &amp; Recognitions
           </h3>
         </FadeInAtom>
-        <AboutSkillComponent {...aboutSkillComponentProps} />
+        <AboutSkillComponent {...props.aboutSkillComponentProps} />
       </div>
-      <AwardsComponent {...awardsComponentProps} />
+      <AwardsComponent {...props.awardsComponentProps} />
     </div>
   );
 }

@@ -6,9 +6,7 @@ type Props = {
   >;
 };
 
-export const HomeContentModule = ({
-  darkLightPreviewComponentProps,
-}: Props) => {
+export const HomeContentModule = (props: Props) => {
   return (
     <div className='flex flex-col gap-[4.75rem] text-center text-[--text]'>
       <div>
@@ -19,7 +17,7 @@ export const HomeContentModule = ({
           Template
         </h4>
       </div>
-      <DarkLightPreviewComponent {...darkLightPreviewComponentProps} />
+      <DarkLightPreviewComponent {...props.darkLightPreviewComponentProps} />
     </div>
   );
 };

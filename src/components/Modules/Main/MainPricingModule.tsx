@@ -8,10 +8,10 @@ type Props = {
   >;
 };
 
-export function MainPricingModule({ pricingOptionsComponentProps }: Props) {
+export function MainPricingModule(props: Props) {
   return (
     <div
-      className='grid gap-20 rounded-[0_2rem_0_0] bg-[--background3] px-4 py-24 lg:px-12'
+      className='grid gap-20 rounded-[0_2rem_0_0] border-b border-solid border-b-[--border2] bg-[--background3] px-4 py-24 lg:px-12'
       data-scroll-index='4'
     >
       <FadeInUpAtom>
@@ -23,7 +23,7 @@ export function MainPricingModule({ pricingOptionsComponentProps }: Props) {
         </div>
       </FadeInUpAtom>
 
-      <PricingOptionsComponent {...pricingOptionsComponentProps} />
+      <PricingOptionsComponent {...props.pricingOptionsComponentProps} />
     </div>
   );
 }

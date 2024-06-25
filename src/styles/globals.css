@@ -71,6 +71,10 @@ p {
   margin: 0;
 }
 
+a:hover {
+  color: inherit;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
 }

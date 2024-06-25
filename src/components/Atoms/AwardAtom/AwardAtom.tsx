@@ -8,21 +8,21 @@ type Props = {
   accolade: string;
 };
 
-export function AwardAtom({ serial, year, imageUrl, title, accolade }: Props) {
+export function AwardAtom(props: Props) {
   return (
     <div className='h-full rounded-xl bg-[--neutral] p-10'>
       <div className='flex justify-between'>
         <div>
-          <span>{serial}</span>
+          <span>{props.serial}</span>
         </div>
         <div>
-          <span>{year}</span>
+          <span>{props.year}</span>
         </div>
       </div>
 
       <div className='mb-8 mt-20 w-24'>
         <Image
-          src={imageUrl}
+          src={props.imageUrl}
           alt=''
           width={100}
           height={0}
@@ -30,9 +30,9 @@ export function AwardAtom({ serial, year, imageUrl, title, accolade }: Props) {
         />
       </div>
 
-      <h5>{title}</h5>
+      <h5>{props.title}</h5>
       <span className='mt-3 uppercase tracking-wide text-[--primary]'>
-        {accolade}
+        {props.accolade}
       </span>
     </div>
   );

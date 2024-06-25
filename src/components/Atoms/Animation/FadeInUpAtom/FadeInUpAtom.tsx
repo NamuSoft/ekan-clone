@@ -7,12 +7,9 @@ type Props = {
   delay?: number;
 } & PropsWithChildren;
 
-export function FadeInUpAtom({
-  className,
-  children,
-  duration = 2,
-  delay = 0,
-}: Props) {
+export function FadeInUpAtom(props: Props) {
+  const { className, children, duration = 2, delay = 0 } = props;
+
   return (
     <motion.div
       className={className}

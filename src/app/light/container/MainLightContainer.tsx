@@ -7,7 +7,9 @@ import {
   mainServicesModuleProps,
   mainPortfolioModuleProps,
   mainPricingModuleProps,
-} from "~/data";
+  mainContactModuleProps,
+  mainBlogModuleProps,
+} from "~/utils/data";
 
 import "~/styles/light.css";
 
@@ -20,6 +22,12 @@ export const MainLightContainer = () => {
       defaultHoverColor: "#ffffff",
       defaultHoverBg: "#000000",
     },
+    inputThemeProps: {
+      activeBg: "transparent",
+      hoverBg: "transparent",
+      hoverBorderColor: "none",
+      activeBorderColor: "black",
+    },
     utilityModulesProps,
     mainHeaderModuleProps,
     mainHeroModuleProps,
@@ -27,6 +35,8 @@ export const MainLightContainer = () => {
     mainAboutModuleProps,
     mainPortfolioModuleProps,
     mainPricingModuleProps,
+    mainContactModuleProps,
+    mainBlogModuleProps,
   };
 
   return <MainTemplate {...mainTemplateProps} />;

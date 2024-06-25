@@ -8,7 +8,7 @@ type Props = {
   >;
 };
 
-export function MainPortfolioModule({ portfolioWorksComponentProps }: Props) {
+export function MainPortfolioModule(props: Props) {
   return (
     <div
       className='grid gap-12 rounded-[0_0_2rem_0] bg-[--background3] px-4 py-24 lg:px-12'
@@ -28,7 +28,7 @@ export function MainPortfolioModule({ portfolioWorksComponentProps }: Props) {
           <Link href='#'>View All Works</Link>
         </div>
       </div>
-      <PortfolioWorksComponent {...portfolioWorksComponentProps} />
+      <PortfolioWorksComponent {...props.portfolioWorksComponentProps} />
     </div>
   );
 }

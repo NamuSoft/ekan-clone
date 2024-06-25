@@ -1,0 +1,58 @@
+.formContainer {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "name name" "email email" "subject subject" "message message" "submit submit";
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.subject {
+  grid-area: subject;
+}
+
+.message {
+  grid-area: message;
+}
+
+.submit {
+  grid-area: submit;
+}
+
+.contactButton {
+  width: 100%;
+  padding-block: 1.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.contactButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--primary);
+  transition: all 0.4s;
+}
+
+.contactButton:is(:hover, :focus-within)::before {
+  width: 100%;
+}
+
+.contactButton:is(:hover, :focus-within) {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+@media (min-width: 1024px) {
+  .formContainer {
+    grid-template-areas: "name email" "subject subject" "message message" "submit submit";
+  }
+}

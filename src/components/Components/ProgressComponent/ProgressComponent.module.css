@@ -8,12 +8,11 @@
 
 .progress::after {
   position: absolute;
-  font-family: "Font Awesome 5 Free";
   content: "\02C4";
   text-align: center;
-  line-height: 44px;
-  font-size: 13px;
-  font-weight: 900;
+  line-height: 54px;
+  font-size: 33px;
+  font-weight: 500;
   color: var(--text);
   left: 0;
   top: 0;
@@ -22,4 +21,11 @@
   cursor: pointer;
   display: block;
   z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .progress::after {
+    line-height: 45px;
+    font-size: 23px;
+  }
 }

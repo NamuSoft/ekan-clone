@@ -5,10 +5,10 @@ type Props = {
   options: Array<React.ComponentProps<typeof PricingOptionAtom>>;
 };
 
-export function PricingOptionsComponent({ options }: Props) {
+export function PricingOptionsComponent(props: Props) {
   return (
     <div className='grid gap-12 lg:auto-cols-[1fr] lg:grid-flow-col'>
-      {options.map((option, index) => {
+      {props.options.map((option, index) => {
         return (
           <FadeInAtom delay={0.2} key={`${option.title}-${index}`}>
             <PricingOptionAtom {...option} />

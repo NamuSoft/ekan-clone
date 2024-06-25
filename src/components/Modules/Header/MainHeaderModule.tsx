@@ -1,22 +1,19 @@
 import { useSnapshot } from "valtio";
 import { motion } from "framer-motion";
 
-import NavbarStore from "~/store/NavbarStore";
-
-import { SocialsComponent } from "~/components/Components/SocialsComponent/SocialsComponent";
+import { SocialIconsComponent } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
 import { NavMenuListComponent } from "~/components/Components/NavMenuListComponent/NavMenuListComponent";
 import { NavContactToggleComponent } from "~/components/Components/NavContactToggleComponent/NavContactToggleComponent";
 import { LogoAtom } from "~/components/Atoms/LogoAtom/LogoAtom";
 
+import NavbarStore from "~/store/NavbarStore";
+
 type Props = {
-  socialsComponentProps: React.ComponentProps<typeof SocialsComponent>;
+  SocialIconsComponentProps: React.ComponentProps<typeof SocialIconsComponent>;
   navMenuListComponentProps: React.ComponentProps<typeof NavMenuListComponent>;
 };
 
-export function MainHeaderModule({
-  socialsComponentProps,
-  navMenuListComponentProps,
-}: Props) {
+export function MainHeaderModule(props: Props) {
   const { open } = useSnapshot(NavbarStore.state);
 
   const variants = {
@@ -36,11 +33,11 @@ export function MainHeaderModule({
           transition={{ type: "tween", ease: "easeInOut" }}
           className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20 lg:hidden'
         >
-          <NavMenuListComponent {...navMenuListComponentProps} />
+          <NavMenuListComponent {...props.navMenuListComponentProps} />
         </motion.div>
 
         <div className='hidden lg:block'>
-          <SocialsComponent {...socialsComponentProps} />
+          <SocialIconsComponent {...props.SocialIconsComponentProps} />
         </div>
       </div>
 

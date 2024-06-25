@@ -8,15 +8,15 @@ type NavItemAtomProps = {
   scrollToIndex?: number;
 };
 
-export function NavItemAtom({ link, name, scrollToIndex }: NavItemAtomProps) {
+export function NavItemAtom(props: NavItemAtomProps) {
   return (
     <li className='px-[1rem] py-2.5'>
       <Link
-        href={link}
+        href={props.link}
         onClick={() => NavbarStore.close()}
-        data-scroll-nav={scrollToIndex}
+        data-scroll-nav={props.scrollToIndex}
       >
-        {name}
+        {props.name}
       </Link>
     </li>
   );

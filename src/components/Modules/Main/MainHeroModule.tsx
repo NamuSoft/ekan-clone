@@ -5,10 +5,10 @@ type Props = {
   heroProfileComponentProps: React.ComponentProps<typeof HeroProfileComponent>;
 };
 
-export const MainHeroModule = ({ heroProfileComponentProps }: Props) => {
+export const MainHeroModule = (props: Props) => {
   return (
     <div className='flex flex-wrap'>
-      <HeroProfileComponent {...heroProfileComponentProps} />
+      <HeroProfileComponent {...props.heroProfileComponentProps} />
       <ProfileInfoComponent />
     </div>
   );

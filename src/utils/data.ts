@@ -1,6 +1,6 @@
-import { type SocialLinks } from "~/components/Components/SocialsComponent/SocialsComponent";
+import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
 
-const socialsComponentProps = {
+const SocialIconsComponentProps = {
   socialLinks: [
     {
       iconName: "behance",
@@ -84,7 +84,7 @@ export const utilityModulesProps = {
 };
 
 export const mainHeaderModuleProps = {
-  socialsComponentProps,
+  SocialIconsComponentProps,
   navMenuListComponentProps,
 };
 
@@ -95,7 +95,7 @@ export const mainTopNavigationComponent = {
 export const mainHeroModuleProps = {
   heroProfileComponentProps: {
     iconOverlayComponentProps: {
-      Icons: [
+      icons: [
         {
           width: 24,
           height: 24,
@@ -116,7 +116,7 @@ export const mainHeroModuleProps = {
         },
       ],
     },
-    socialsComponentProps,
+    SocialIconsComponentProps,
   },
 };
 
@@ -260,6 +260,44 @@ export const mainPricingModuleProps = {
           "Implement with Webflow, React, WordPress, Laravel/PHP",
           "Support 6 months",
         ],
+      },
+    ],
+  },
+};
+
+export const mainContactModuleProps = {
+  socialTextsComponent: {
+    socials: [
+      {
+        name: "Facebook",
+      },
+      {
+        name: "Twitter",
+      },
+      {
+        name: "LinkedIn",
+      },
+      {
+        name: "Dribble",
+      },
+    ],
+  },
+};
+
+export const mainBlogModuleProps = {
+  blogsComponentProps: {
+    blogsContent: [
+      {
+        imageUrl: "/assets/blog1.jpg",
+        title: "12 unique examples of portfolio websites.",
+      },
+      {
+        imageUrl: "/assets/blog2.jpg",
+        title: "Dealing with spring allergy symptoms.",
+      },
+      {
+        imageUrl: "/assets/blog3.jpg",
+        title: "Best wireframe tools for web designers.",
       },
     ],
   },

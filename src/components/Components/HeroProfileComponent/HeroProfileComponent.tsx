@@ -1,17 +1,14 @@
 import Image from "next/image";
 
 import { IconOverlayComponent } from "~/components/Components/IconOverlayComponent/IconOverlayComponent";
-import { SocialsComponent } from "../SocialsComponent/SocialsComponent";
+import { SocialIconsComponent } from "../SocialIconsComponent/SocialIconsComponent";
 
 type Props = {
   iconOverlayComponentProps: React.ComponentProps<typeof IconOverlayComponent>;
-  socialsComponentProps: React.ComponentProps<typeof SocialsComponent>;
+  SocialIconsComponentProps: React.ComponentProps<typeof SocialIconsComponent>;
 };
 
-export function HeroProfileComponent({
-  iconOverlayComponentProps,
-  socialsComponentProps,
-}: Props) {
+export function HeroProfileComponent(props: Props) {
   return (
     <div className='mt-0 w-full max-w-full shrink-0 overflow-hidden rounded-[1rem_1rem_0_0] bg-[--background3] px-4 pb-5 pt-20 lg:-mb-20 lg:w-[33.33333333%] lg:flex-[0_0_auto] lg:rounded-[1rem_0_1rem_1rem] lg:px-10 lg:pb-20'>
       <div className='flex min-h-[calc(100%_-_5rem)] items-center rounded-[0.5rem] border border-solid border-[--border2] px-[1rem] py-10'>
@@ -24,7 +21,7 @@ export function HeroProfileComponent({
               height={0}
               style={{ width: "100%", height: "auto" }}
             />
-            <IconOverlayComponent {...iconOverlayComponentProps} />
+            <IconOverlayComponent {...props.iconOverlayComponentProps} />
           </div>
 
           <div className='mt-8 text-center'>
@@ -37,8 +34,8 @@ export function HeroProfileComponent({
           </div>
 
           <div className='mt-5 flex justify-center'>
-            <SocialsComponent
-              {...socialsComponentProps}
+            <SocialIconsComponent
+              {...props.SocialIconsComponentProps}
               className='rounded-lg'
             />
           </div>
