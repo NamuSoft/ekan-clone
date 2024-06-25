@@ -1,21 +1,21 @@
 import Link from "next/link";
 
-export type NavItemAtomProps = {
+import NavbarStore from "~/store/NavbarStore";
+
+type NavItemAtomProps = {
   link: string;
   name: string;
-  onClick?: () => void;
   scrollToIndex?: number;
 };
 
-export function NavItemAtom({
-  link,
-  name,
-  onClick,
-  scrollToIndex,
-}: NavItemAtomProps) {
+export function NavItemAtom({ link, name, scrollToIndex }: NavItemAtomProps) {
   return (
     <li className='px-[1rem] py-2.5'>
-      <Link href={link} onClick={onClick} data-scroll-nav={scrollToIndex}>
+      <Link
+        href={link}
+        onClick={() => NavbarStore.close()}
+        data-scroll-nav={scrollToIndex}
+      >
         {name}
       </Link>
     </li>

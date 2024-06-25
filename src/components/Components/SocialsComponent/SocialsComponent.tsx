@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 import { type IconNames, SVGAtom } from "~/components/Atoms/SVGAtom/SVGAtom";
@@ -9,11 +10,10 @@ export type SocialLinks = Array<{
 
 type Props = {
   socialLinks: SocialLinks;
-  rounded?: boolean;
+  className?: string;
 };
 
-export function SocialsComponent({ socialLinks, rounded = true }: Props) {
-  const isRounded = rounded ? "rounded-full" : "rounded-lg";
+export function SocialsComponent({ socialLinks, className }: Props) {
   return (
     <ul className='flex'>
       {socialLinks.map((social, index) => {
@@ -22,9 +22,12 @@ export function SocialsComponent({ socialLinks, rounded = true }: Props) {
           <li key={`${iconName}-${index}`} className={`mx-0.5 my-0`}>
             <Link href={link}>
               <div
-                className={`flex h-10 w-10 items-center justify-center border border-solid border-[--border2] text-center ${isRounded}`}
+                className={clsx(
+                  `flex h-10 w-10 items-center justify-center rounded-full border border-solid border-[--border2] text-center`,
+                  className
+                )}
               >
-                <SVGAtom iconName={iconName} className='h-6 w-6' />
+                <SVGAtom iconName={iconName} width={12} height={12} />
               </div>
             </Link>
           </li>

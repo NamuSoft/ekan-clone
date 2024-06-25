@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-import "./cursor.css";
+import "./custom.css";
 
 export function CustomCursorComponent() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -13,7 +13,7 @@ export function CustomCursorComponent() {
       if (cursorRef.current == null) return;
       cursorRef.current.setAttribute(
         "style",
-        "top: " + e.pageY + "px; left: " + e.pageX + "px;"
+        "top: " + e.clientY + "px; left: " + e.clientX + "px;"
       );
     };
 
@@ -23,10 +23,10 @@ export function CustomCursorComponent() {
 
       // Check if the current cursor style is pointer
       if (getComputedStyle(e.target as Element).cursor === "pointer") {
-        cursorRef.current.classList.add("expand");
+        cursorRef.current.classList.add("expandCustomCursor");
         setTimeout(() => {
           if (cursorRef.current == null) return;
-          cursorRef.current.classList.remove("expand");
+          cursorRef.current.classList.remove("expandCustomCursor");
         }, 500);
       }
     };
@@ -41,5 +41,5 @@ export function CustomCursorComponent() {
     };
   }, []);
 
-  return <div className='cursorcustom' ref={cursorRef} />;
+  return <div className='customCursor' ref={cursorRef} />;
 }

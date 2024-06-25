@@ -3,25 +3,35 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import { type ComponentToken } from "antd/es/button/style";
 import { type AliasToken } from "antd/es/theme/internal";
 
-import { MainContentModules } from "~/components/Modules/Main/MainContentModules";
 import { MainHeaderModule } from "~/components/Modules/Header/MainHeaderModule";
 import { MainHeroModule } from "~/components/Modules/Main/MainHeroModule";
 import { UtilityModules } from "~/components/Modules/UtilityModules/UtilityModules";
+import { MainServicesModule } from "~/components/Modules/Main/MainServicesModule";
+import { MainAboutModule } from "~/components/Modules/Main/MainAboutModule";
+import { MainPortfolioModule } from "~/components/Modules/Main/MainPortfolioModule";
+import { MainTestimonialModule } from "~/components/Modules/Main/MainTestimonialModule";
+import { MainPricingModule } from "~/components/Modules/Main/MainPricingModule";
 
 type Props = {
   buttonThemeProps: Partial<ComponentToken> & Partial<AliasToken>;
-  mainContentModuleProps: React.ComponentProps<typeof MainContentModules>;
   mainHeaderModuleProps: React.ComponentProps<typeof MainHeaderModule>;
   utilityModulesProps: React.ComponentProps<typeof UtilityModules>;
   mainHeroModuleProps: React.ComponentProps<typeof MainHeroModule>;
+  mainServicesModuleProps: React.ComponentProps<typeof MainServicesModule>;
+  mainAboutModuleProps: React.ComponentProps<typeof MainAboutModule>;
+  mainPortfolioModuleProps: React.ComponentProps<typeof MainPortfolioModule>;
+  mainPricingModuleProps: React.ComponentProps<typeof MainPricingModule>;
 };
 
 export const MainTemplate = ({
   buttonThemeProps,
   utilityModulesProps,
-  mainContentModuleProps,
   mainHeaderModuleProps,
   mainHeroModuleProps,
+  mainServicesModuleProps,
+  mainAboutModuleProps,
+  mainPortfolioModuleProps,
+  mainPricingModuleProps,
 }: Props) => {
   return (
     <ConfigProvider
@@ -51,7 +61,11 @@ export const MainTemplate = ({
 
         <Content className='z-[2] text-[--text]'>
           <MainHeroModule {...mainHeroModuleProps} />
-          <MainContentModules {...mainContentModuleProps} />
+          <MainServicesModule {...mainServicesModuleProps} />
+          <MainAboutModule {...mainAboutModuleProps} />
+          <MainPortfolioModule {...mainPortfolioModuleProps} />
+          <MainTestimonialModule />
+          <MainPricingModule {...mainPricingModuleProps} />
         </Content>
 
         {/* <Footer className='z-[2] bg-transparent'>

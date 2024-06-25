@@ -37,7 +37,10 @@ export function HeroProfileComponent({
           </div>
 
           <div className='mt-5 flex justify-center'>
-            <SocialsComponent {...socialsComponentProps} />
+            <SocialsComponent
+              {...socialsComponentProps}
+              className='rounded-lg'
+            />
           </div>
         </div>
       </div>
