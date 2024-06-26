@@ -11,6 +11,9 @@ import NavbarStore from "~/store/NavbarStore";
 type Props = {
   SocialIconsComponentProps: React.ComponentProps<typeof SocialIconsComponent>;
   navMenuListComponentProps: React.ComponentProps<typeof NavMenuListComponent>;
+  navContactToggleComponentProps: React.ComponentProps<
+    typeof NavContactToggleComponent
+  >;
 };
 
 export function MainHeaderModule(props: Props) {
@@ -41,7 +44,7 @@ export function MainHeaderModule(props: Props) {
         </div>
       </div>
 
-      <NavContactToggleComponent onClick={() => NavbarStore.toggle()} />
+      <NavContactToggleComponent {...props.navContactToggleComponentProps} />
     </div>
   );
 }
