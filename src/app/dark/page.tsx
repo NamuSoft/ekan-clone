@@ -2,8 +2,8 @@
 
 import { MainDarkContainer } from "./container/MainDarkContainer";
 
-const Home = () => {
+const MainPageDark = () => {
   return <MainDarkContainer />;
 };
 
-export default Home;
+export default MainPageDark;

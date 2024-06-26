@@ -6,3 +6,4 @@ export { default as star } from "./star.svg";
 export { default as speechBubble } from "./speechBubble.svg";
 export { default as calendar } from "./calendar.svg";
 export { default as arrowRight } from "./arrowRight.svg";
+export { default as arrowRightTop } from "./arrowRightTop.svg";

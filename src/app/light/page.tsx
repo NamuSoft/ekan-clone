@@ -2,8 +2,8 @@
 
 import { MainLightContainer } from "./container/MainLightContainer";
 
-const Home = () => {
+const MainPageLight = () => {
   return <MainLightContainer />;
 };
 
-export default Home;
+export default MainPageLight;

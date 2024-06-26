@@ -312,3 +312,38 @@ export const mainBlogModuleProps = {
     ],
   },
 };
+
+export const worksHeaderModuleProps = {
+  navMenuListComponentProps,
+};
+
+export const worksContentModuleProps = {
+  portfolioWorksComponentProps: {
+    portfolios: [
+      {
+        imageUrl: "/assets/portfolio1.jpg",
+        title: "GeekFolio Portfolio",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio1.jpg",
+        title: "GeekFolio Portfolio",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio4.jpg",
+        title: "From our gallery",
+      },
+    ],
+  },
+};

@@ -1,3 +1,4 @@
+import { useTitle } from "~/hooks/useTitle";
 import { MainTemplate } from "~/components/Templates/Main/MainTemplate";
 import {
   utilityModulesProps,
@@ -14,6 +15,8 @@ import {
 import "~/styles/light.css";
 
 export const MainLightContainer = () => {
+  useTitle("Gavi - Light");
+
   const mainTemplateProps: React.ComponentProps<typeof MainTemplate> = {
     buttonThemeProps: {
       defaultActiveBorderColor: "#000000",
