@@ -1,4 +1,4 @@
-import { Form, Button, Input, message } from "antd";
+import { Form, Button, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 
 import styles from "./ContactUsFormComponent.module.css";
@@ -10,7 +10,7 @@ type Props = {
 export const ContactUsFormComponent = (props: Props) => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: unknown) => {
+  const onFinish = () => {
     props.onFinish();
   };
 
