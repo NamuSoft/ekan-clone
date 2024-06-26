@@ -1,3 +1,5 @@
+"use client";
+
 import { WorksLightContainer } from "./container/WorksLightContainer";
 
 const WorksPageLight = () => {

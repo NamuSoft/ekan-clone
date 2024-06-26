@@ -1,14 +1,14 @@
 import { ToggleAtom } from "~/components/Atoms/ToggleAtom/ToggleAtom";
 
 type Props = {
-  onClick: () => void;
+  toggleAtomProps: React.ComponentProps<typeof ToggleAtom>;
 };
 
 export function NavContactToggleComponent(props: Props) {
   return (
     <div>
       <div className='lg:hidden'>
-        <ToggleAtom onClick={props.onClick} />
+        <ToggleAtom {...props.toggleAtomProps} />
       </div>
       <div className='hidden lg:block'>
         <a href='mailto:abc@example.com'>
