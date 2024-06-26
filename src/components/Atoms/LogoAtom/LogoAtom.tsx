@@ -8,7 +8,7 @@ export function LogoAtom() {
   if (pathname.includes("light")) {
     return (
       <div className='z-[1]'>
-        <Link href='#0'>
+        <Link href='/home'>
           <Image
             src='/assets/logo-dark.png'
             alt='Logo'
@@ -23,7 +23,7 @@ export function LogoAtom() {
 
   return (
     <div className='z-[1]'>
-      <Link href='#0'>
+      <Link href='/home'>
         <Image
           src='/assets/logo-light.png'
           alt='Logo'
