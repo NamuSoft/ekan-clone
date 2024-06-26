@@ -27,10 +27,8 @@ export function MainContactModule(props: Props) {
             If you would like to work with us or just want to get in touch, we’d
             love to hear from you!
           </p>
-          <div className='text-3xl font-semibold underline '>
-            <Link href='#0' className='text-[--text]'>
-              +1 840 841 25 69
-            </Link>
+          <div className='text-3xl font-semibold text-[--primary] underline '>
+            <Link href='#0'>+1 840 841 25 69</Link>
           </div>
         </div>
 
