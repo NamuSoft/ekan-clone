@@ -5,7 +5,10 @@ import { ContactUsFormComponent } from "~/components/Components/ContactUsFormCom
 import { SocialTextsComponent } from "~/components/Components/SocialTextsComponent/SocialTextsComponent";
 
 type Props = {
-  socialTextsComponent: React.ComponentProps<typeof SocialTextsComponent>;
+  socialTextsComponentProps: React.ComponentProps<typeof SocialTextsComponent>;
+  contactUsFormComponentProps: React.ComponentProps<
+    typeof ContactUsFormComponent
+  >;
 };
 
 export function MainContactModule(props: Props) {
@@ -32,12 +35,12 @@ export function MainContactModule(props: Props) {
         </div>
 
         <div className='mt-16'>
-          <SocialTextsComponent {...props.socialTextsComponent} />
+          <SocialTextsComponent {...props.socialTextsComponentProps} />
         </div>
       </FadeInAtom>
 
       <FadeInAtom>
-        <ContactUsFormComponent />
+        <ContactUsFormComponent {...props.contactUsFormComponentProps} />
       </FadeInAtom>
     </div>
   );

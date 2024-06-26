@@ -3,11 +3,15 @@ import TextArea from "antd/es/input/TextArea";
 
 import styles from "./ContactUsFormComponent.module.css";
 
-export const ContactUsFormComponent = () => {
+type Props = {
+  onFinish: () => void;
+};
+
+export const ContactUsFormComponent = (props: Props) => {
   const [form] = Form.useForm();
 
   const onFinish = (values: unknown) => {
-    void message.info(JSON.stringify(values));
+    props.onFinish();
   };
 
   return (

@@ -1,3 +1,5 @@
+import { message } from "antd";
+
 import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
 
 const SocialIconsComponentProps = {
@@ -19,6 +21,11 @@ const SocialIconsComponentProps = {
       link: "#",
     },
   ] as SocialLinks,
+};
+
+const onFinish = () => {
+  // console.log("Done");
+  void message.info("Done");
 };
 
 export const navMenuListComponentProps = {
@@ -266,7 +273,7 @@ export const mainPricingModuleProps = {
 };
 
 export const mainContactModuleProps = {
-  socialTextsComponent: {
+  socialTextsComponentProps: {
     socials: [
       {
         name: "Facebook",
@@ -281,6 +288,9 @@ export const mainContactModuleProps = {
         name: "Dribble",
       },
     ],
+  },
+  contactUsFormComponentProps: {
+    onFinish,
   },
 };
 
