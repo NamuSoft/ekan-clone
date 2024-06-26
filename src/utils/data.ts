@@ -1,6 +1,7 @@
 import { message } from "antd";
 
 import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
+import NavbarStore from "~/store/NavbarStore";
 
 const SocialIconsComponentProps = {
   socialLinks: [
@@ -28,41 +29,56 @@ const onFinish = () => {
   void message.info("Done");
 };
 
+const closeNav = () => {
+  NavbarStore.close();
+};
+
+const toggleNav = () => {
+  NavbarStore.toggle();
+};
+
 export const navMenuListComponentProps = {
   navItems: [
     {
       name: "Home",
       link: "#",
+      onClick: closeNav,
     },
     {
       name: "Services",
       link: "#",
       scrollToIndex: 1,
+      onClick: closeNav,
     },
     {
       name: "About",
       link: "#",
       scrollToIndex: 2,
+      onClick: closeNav,
     },
     {
       name: "Portfolio",
       link: "#",
       scrollToIndex: 3,
+      onClick: closeNav,
     },
     {
       name: "Price",
       link: "#",
       scrollToIndex: 4,
+      onClick: closeNav,
     },
     {
       name: "Contact",
       link: "#",
       scrollToIndex: 5,
+      onClick: closeNav,
     },
     {
       name: "Blog",
       link: "#",
       scrollToIndex: 6,
+      onClick: closeNav,
     },
   ],
 };
@@ -93,6 +109,11 @@ export const utilityModulesProps = {
 export const mainHeaderModuleProps = {
   SocialIconsComponentProps,
   navMenuListComponentProps,
+  navContactToggleComponentProps: {
+    toggleAtomProps: {
+      onClick: toggleNav,
+    },
+  },
 };
 
 export const mainTopNavigationComponent = {
@@ -132,25 +153,25 @@ export const mainServicesModuleProps = {
   servicesInsightsComponentProps: {
     insights: [
       {
-        imageUrl: "/service1.png",
+        imageUrl: "/assets/service1.png",
         title: "UI / UX DESIGN",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service2.png",
+        imageUrl: "/assets/service2.png",
         title: "WEB DEVELOPMENT",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service3.png",
+        imageUrl: "/assets/service3.png",
         title: "SEO / MARKETING",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service4.png",
+        imageUrl: "/assets/service4.png",
         title: "TECHNOLOGY SOLUTION",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
@@ -189,21 +210,21 @@ export const mainAboutModuleProps = {
       {
         serial: 0o1,
         year: 2019,
-        imageUrl: "/award1.png",
+        imageUrl: "/assets/award1.png",
         title: "02x Designer Award",
         accolade: "NOMINEE",
       },
       {
         serial: 0o2,
         year: 2020,
-        imageUrl: "/award2.png",
+        imageUrl: "/assets/award2.png",
         title: "02x Designer Award",
         accolade: "WINNER",
       },
       {
         serial: 0o3,
         year: 2021,
-        imageUrl: "/award2.png",
+        imageUrl: "/assets/award2.png",
         title: "02x Designer Award",
         accolade: "RUNNERS UP",
       },
