@@ -24,8 +24,8 @@ export const ContactUsFormComponent = (props: Props) => {
       <div className={styles.name}>
         <Form.Item name='Name'>
           <Input
-            placeholder='Name'
             className='h-14 border-[--border3] bg-transparent'
+            placeholder='Name'
           />
         </Form.Item>
       </div>
@@ -51,8 +51,8 @@ export const ContactUsFormComponent = (props: Props) => {
       <div className={styles.message}>
         <Form.Item name='Message'>
           <TextArea
-            placeholder='Message'
             className='border-[--border3] bg-transparent'
+            placeholder='Message'
             autoSize={{
               minRows: 6,
             }}

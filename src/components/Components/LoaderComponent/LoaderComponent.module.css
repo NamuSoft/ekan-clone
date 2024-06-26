@@ -3,6 +3,7 @@
   font-size: 1.25rem;
   padding-right: 1rem;
   display: inline-block;
+  color: var(--text);
 }
 
 @keyframes glowFade {

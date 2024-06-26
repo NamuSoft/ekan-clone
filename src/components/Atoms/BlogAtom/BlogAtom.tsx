@@ -15,7 +15,7 @@ export function BlogAtom(props: Props) {
         <Image src={props.imageUrl} alt='' width={500} height={0} />
       </div>
       <div className='px-2.5 py-0'>
-        <div className='relative z-[2] -mt-8 rounded-[0.25rem] bg-[--neutral] px-5 py-10 lg:px-10'>
+        <div className='relative z-[2] -mt-8 rounded-[0.25rem] bg-[--background5] px-5 py-10 lg:px-10'>
           <span className='mb-2.5 inline-block rounded-[1.875rem] border border-solid border-[--border3] px-[1rem] py-[0.25rem] text-xs uppercase'>
             <SVGAtom
               iconName='calendar'

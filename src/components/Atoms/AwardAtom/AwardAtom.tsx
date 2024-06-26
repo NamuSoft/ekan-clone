@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type Props = {
   serial: number;
@@ -9,8 +10,10 @@ type Props = {
 };
 
 export function AwardAtom(props: Props) {
+  const pathname = usePathname();
+
   return (
-    <div className='h-full rounded-xl bg-[--neutral] p-10'>
+    <div className='h-full rounded-xl bg-[--background5] p-10'>
       <div className='flex justify-between'>
         <div>
           <span>{props.serial}</span>
@@ -22,7 +25,7 @@ export function AwardAtom(props: Props) {
 
       <div className='mb-8 mt-20 w-24'>
         <Image
-          src={props.imageUrl}
+          src={`/assets${pathname}${props.imageUrl}`}
           alt=''
           width={100}
           height={0}

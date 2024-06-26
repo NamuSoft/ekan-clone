@@ -1,8 +1,14 @@
 :root {
   --background: #1c1c1c;
-  --background2: #000000;
+  --background2: #131313;
+  --background3: #1d1d1d;
+  --background4: rgba(29, 29, 29, 0.8);
+  --background5: #232323;
   --text: #ffffff;
+  --text2: #ddd;
+  --text3: #fff;
+  --border: rgba(255, 255, 255, 0.1);
+  --border2: rgba(255, 255, 255, 0.1);
+  --border3: rgba(255, 255, 255, 0.2);
   --primary: #c8f31d;
-  --neutral: #000000;
-  --border: #ffffff0d;
 }

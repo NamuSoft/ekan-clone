@@ -2,7 +2,7 @@
   display: flex;
   padding-inline: 2rem;
   padding-bottom: 1rem;
-  background-color: var(--neutral);
+  background-color: var(--background5);
   clip-path: polygon(
     22.44% 10.27%,
     77.62% 10.27%,

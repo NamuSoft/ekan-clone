@@ -35,7 +35,7 @@ export function ProfileInfoComponent() {
           <div>
             <Button
               type='default'
-              className='transform-none border-[--text] bg-transparent px-9 py-6'
+              className='transform-none border-[--text] bg-transparent px-9 py-6 text-[--text]'
             >
               Download C.V
             </Button>

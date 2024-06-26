@@ -11,23 +11,23 @@ import {
   mainBlogModuleProps,
 } from "~/utils/data";
 
-import "~/styles/light.css";
+import "~/styles/dark.css";
 
-export const MainLightContainer = () => {
+export const MainDarkContainer = () => {
   const mainTemplateProps: React.ComponentProps<typeof MainTemplate> = {
     buttonThemeProps: {
-      defaultActiveBorderColor: "#000000",
-      defaultActiveColor: "#ffffff",
-      defaultHoverBorderColor: "#000000",
-      defaultHoverColor: "#ffffff",
-      defaultHoverBg: "#000000",
+      defaultActiveBorderColor: "#ffffff",
+      defaultActiveColor: "#000000",
+      defaultHoverBorderColor: "#ffffff",
+      defaultHoverColor: "#000000",
+      defaultHoverBg: "#ffffff",
     },
     inputThemeProps: {
       activeBg: "transparent",
       hoverBg: "transparent",
       hoverBorderColor: "none",
-      activeBorderColor: "black",
-      colorTextPlaceholder: "rgba(0, 0, 0, 0.2)",
+      activeBorderColor: "white",
+      colorTextPlaceholder: "#ffffff33",
     },
     mainUtilityModulesProps: utilityModulesProps,
     mainHeaderModuleProps,
