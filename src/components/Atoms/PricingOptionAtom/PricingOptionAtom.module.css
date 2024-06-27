@@ -1,0 +1,19 @@
+.option {
+  display: flex;
+  padding-inline: 2rem;
+  padding-bottom: 1rem;
+  background-color: var(--background5);
+  clip-path: polygon(
+    22.44% 10.27%,
+    77.62% 10.27%,
+    86.5% 0%,
+    100% 0%,
+    100% 60%,
+    100% 100%,
+    50% 100%,
+    0% 100%,
+    0% 70%,
+    0% 0%,
+    13.57% 0%
+  );
+}

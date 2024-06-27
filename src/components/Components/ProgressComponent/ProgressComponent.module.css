@@ -1,0 +1,31 @@
+.progress {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.progress::after {
+  position: absolute;
+  content: "\02C4";
+  text-align: center;
+  line-height: 54px;
+  font-size: 33px;
+  font-weight: 500;
+  color: var(--text);
+  left: 0;
+  top: 0;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .progress::after {
+    line-height: 45px;
+    font-size: 23px;
+  }
+}
