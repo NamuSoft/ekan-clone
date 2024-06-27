@@ -9,7 +9,7 @@ type Props = {
 export function MainBlogModule(props: Props) {
   return (
     <div
-      className='grid gap-8 bg-[--background3] px-4 py-24 lg:px-12'
+      className='grid gap-8 rounded-[0_0_1rem_1rem] bg-[--background3] px-4 py-24 lg:px-12'
       data-scroll-index='6'
     >
       <FadeInAtom className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between'>
