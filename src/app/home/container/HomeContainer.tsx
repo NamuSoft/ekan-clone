@@ -1,20 +1,17 @@
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import {
+  darkLightPreviewComponentProps,
+  utilityModulesProps,
+} from "~/utils/data";
+
+import "~/styles/dark.css";
 
 export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeContentModuleProps: {
-      darkLightProps: [
-        {
-          imageUrl: "/assets/1.png",
-          title: "Dark Mode",
-        },
-        {
-          imageUrl: "/assets/2.png",
-          title: "Light Mode",
-        },
-      ],
+      darkLightPreviewComponentProps,
     },
-    linesAtomProps: { numberOfLines: 5 },
+    homeUtilityModulesProps: utilityModulesProps,
   };
 
   return <HomeTemplate {...homeTemplateProps} />;
