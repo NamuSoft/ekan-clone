@@ -1,4 +1,7 @@
+import { message } from "antd";
+
 import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
+import NavbarStore from "~/store/NavbarStore";
 
 const SocialIconsComponentProps = {
   socialLinks: [
@@ -21,41 +24,61 @@ const SocialIconsComponentProps = {
   ] as SocialLinks,
 };
 
+const onFinish = () => {
+  // console.log("Done");
+  void message.info("Done");
+};
+
+const closeNav = () => {
+  NavbarStore.close();
+};
+
+const toggleNav = () => {
+  NavbarStore.toggle();
+};
+
 export const navMenuListComponentProps = {
   navItems: [
     {
       name: "Home",
       link: "#",
+      onClick: closeNav,
     },
     {
       name: "Services",
       link: "#",
       scrollToIndex: 1,
+      onClick: closeNav,
     },
     {
       name: "About",
       link: "#",
       scrollToIndex: 2,
+      onClick: closeNav,
     },
     {
       name: "Portfolio",
       link: "#",
       scrollToIndex: 3,
+      onClick: closeNav,
     },
     {
       name: "Price",
       link: "#",
       scrollToIndex: 4,
+      onClick: closeNav,
     },
     {
       name: "Contact",
       link: "#",
       scrollToIndex: 5,
+      onClick: closeNav,
     },
     {
       name: "Blog",
       link: "#",
       scrollToIndex: 6,
+      onClick: closeNav,
     },
   ],
 };
@@ -86,6 +109,11 @@ export const utilityModulesProps = {
 export const mainHeaderModuleProps = {
   SocialIconsComponentProps,
   navMenuListComponentProps,
+  navContactToggleComponentProps: {
+    toggleAtomProps: {
+      onClick: toggleNav,
+    },
+  },
 };
 
 export const mainTopNavigationComponent = {
@@ -266,7 +294,7 @@ export const mainPricingModuleProps = {
 };
 
 export const mainContactModuleProps = {
-  socialTextsComponent: {
+  socialTextsComponentProps: {
     socials: [
       {
         name: "Facebook",
@@ -281,6 +309,9 @@ export const mainContactModuleProps = {
         name: "Dribble",
       },
     ],
+  },
+  contactUsFormComponentProps: {
+    onFinish,
   },
 };
 

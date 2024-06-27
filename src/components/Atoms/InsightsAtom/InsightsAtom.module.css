@@ -1,0 +1,42 @@
+.services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../../public/assets/noise1.png");
+  background-size: auto;
+  background-repeat: repeat;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--background4);
+  backdrop-filter: blur(3.125rem);
+}
+
+.bord {
+  position: absolute;
+  left: 4%;
+  width: 92%;
+  height: 0.5rem;
+  background: var(--primary);
+  border-radius: 0.25rem;
+  bottom: -1px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.services:is(:hover, :focus-visible) .bord {
+  opacity: 1;
+}

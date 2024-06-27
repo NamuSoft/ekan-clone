@@ -1,0 +1,14 @@
+:root {
+  --background: #ffffff;
+  --background2: #c6cfd8;
+  --background3: #e6eaee;
+  --background4: #ffffff99;
+  --text: #000000;
+  --text2: #777;
+  --text3: #444;
+  --border: rgba(0, 0, 0, 0.05);
+  --border2: rgba(0, 0, 0, 0.1);
+  --border3: rgba(0, 0, 0, 0.2);
+  --primary: #55e6a5;
+  --neutral: #ffffff;
+}

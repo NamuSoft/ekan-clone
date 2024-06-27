@@ -71,7 +71,7 @@ p {
   margin: 0;
 }
 
-a:hover {
+a:is(:hover, :active, :focus-visible) {
   color: inherit;
 }
 
