@@ -103,7 +103,11 @@ export const linesComponentProps = {
 };
 
 export const utilityModulesProps = {
-  linesComponentProps: { numberOfLines: 5 },
+  linesComponentProps: { numberOfLines: 5, className: "bg-[--background]" },
+};
+
+export const homeUtilityModulesProps = {
+  linesComponentProps: { numberOfLines: 5, className: "bg-[--background3]" },
 };
 
 export const mainHeaderModuleProps = {
@@ -250,6 +254,29 @@ export const mainPortfolioModuleProps = {
       {
         imageUrl: "/assets/portfolio2.jpg",
         title: "Luxury Modern Website",
+      },
+    ],
+  },
+};
+
+export const mainDarkPortfolioModuleProps = {
+  portfolioWorksComponentProps: {
+    portfolios: [
+      {
+        imageUrl: "/assets/portfolio1.jpg",
+        title: "GeekFolio Portfolio",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio3.jpg",
+        title: "Partiner BPO",
+      },
+      {
+        imageUrl: "/assets/portfolio3.jpg",
+        title: "Partiner BPO",
       },
     ],
   },
