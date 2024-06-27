@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import styles from "./InsightsAtom.module.css";
 
@@ -9,11 +10,13 @@ type Props = {
 };
 
 export function InsightsAtom(props: Props) {
+  const pathname = usePathname();
+
   return (
     <div className={`flow relative mb-7 px-7 py-10 ${styles.services}`}>
       <span className='relative z-[1] inline-block w-16 opacity-70'>
         <Image
-          src={props.imageUrl}
+          src={`/assets${pathname}${props.imageUrl}`}
           alt=''
           width={70}
           height={0}

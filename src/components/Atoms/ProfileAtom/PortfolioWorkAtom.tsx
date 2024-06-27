@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./PortfolioWorkAtom.module.css";
+import { SVGAtom } from "../SVGAtom/SVGAtom";
 
 type Props = {
   imageUrl: string;
@@ -24,7 +25,7 @@ export function PortfolioWorkAtom(props: Props) {
         </Link>
       </div>
 
-      <div className='mt-8 flex items-center px-4'>
+      <div className='mt-8 flex items-center justify-between px-4'>
         <div>
           <span
             className={`mb-[1rem] inline-block rounded-[2rem] border border-solid px-[1rem] py-1 text-xs transition-all duration-[0.4s] ${styles.brand}`}
@@ -35,6 +36,10 @@ export function PortfolioWorkAtom(props: Props) {
             <Link href='#'>{props.title}</Link>
           </h5>
         </div>
+        <SVGAtom
+          iconName='arrowRightTop'
+          className={`h-6 w-6 ${styles.arrow}`}
+        />
       </div>
     </div>
   );

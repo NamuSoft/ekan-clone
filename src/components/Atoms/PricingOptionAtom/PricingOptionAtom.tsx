@@ -30,7 +30,7 @@ export function PricingOptionAtom(props: Props) {
           <div>
             <Button
               type='default'
-              className='w-full border-[--text] py-6 uppercase'
+              className='w-full border-[--text] bg-transparent py-6 uppercase text-[--text]'
             >
               Get started
             </Button>

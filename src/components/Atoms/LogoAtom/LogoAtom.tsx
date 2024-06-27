@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 export function LogoAtom() {
   const pathname = usePathname();
 
-  if (pathname === "/light") {
+  if (pathname.includes("light")) {
     return (
       <div className='z-[1]'>
         <Link href='#0'>

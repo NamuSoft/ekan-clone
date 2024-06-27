@@ -153,25 +153,25 @@ export const mainServicesModuleProps = {
   servicesInsightsComponentProps: {
     insights: [
       {
-        imageUrl: "/assets/service1.png",
+        imageUrl: "/service1.png",
         title: "UI / UX DESIGN",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service2.png",
+        imageUrl: "/service2.png",
         title: "WEB DEVELOPMENT",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service3.png",
+        imageUrl: "/service3.png",
         title: "SEO / MARKETING",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service4.png",
+        imageUrl: "/service4.png",
         title: "TECHNOLOGY SOLUTION",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
@@ -210,21 +210,21 @@ export const mainAboutModuleProps = {
       {
         serial: 0o1,
         year: 2019,
-        imageUrl: "/assets/award1.png",
+        imageUrl: "/award1.png",
         title: "02x Designer Award",
         accolade: "NOMINEE",
       },
       {
         serial: 0o2,
         year: 2020,
-        imageUrl: "/assets/award2.png",
+        imageUrl: "/award2.png",
         title: "02x Designer Award",
         accolade: "WINNER",
       },
       {
         serial: 0o3,
         year: 2021,
-        imageUrl: "/assets/award2.png",
+        imageUrl: "/award2.png",
         title: "02x Designer Award",
         accolade: "RUNNERS UP",
       },
@@ -329,6 +329,41 @@ export const mainBlogModuleProps = {
       {
         imageUrl: "/assets/blog3.jpg",
         title: "Best wireframe tools for web designers.",
+      },
+    ],
+  },
+};
+
+export const worksHeaderModuleProps = {
+  navMenuListComponentProps,
+};
+
+export const worksContentModuleProps = {
+  portfolioWorksComponentProps: {
+    portfolios: [
+      {
+        imageUrl: "/assets/portfolio1.jpg",
+        title: "GeekFolio Portfolio",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio1.jpg",
+        title: "GeekFolio Portfolio",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio2.jpg",
+        title: "Luxury Modern Website",
+      },
+      {
+        imageUrl: "/assets/portfolio4.jpg",
+        title: "From our gallery",
       },
     ],
   },

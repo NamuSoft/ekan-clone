@@ -1,4 +1,4 @@
-import { Form, Button, Input, message } from "antd";
+import { Form, Button, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
 
 import styles from "./ContactUsFormComponent.module.css";
@@ -10,7 +10,7 @@ type Props = {
 export const ContactUsFormComponent = (props: Props) => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: unknown) => {
+  const onFinish = () => {
     props.onFinish();
   };
 
@@ -24,8 +24,8 @@ export const ContactUsFormComponent = (props: Props) => {
       <div className={styles.name}>
         <Form.Item name='Name'>
           <Input
-            placeholder='Name'
             className='h-14 border-[--border3] bg-transparent'
+            placeholder='Name'
           />
         </Form.Item>
       </div>
@@ -51,8 +51,8 @@ export const ContactUsFormComponent = (props: Props) => {
       <div className={styles.message}>
         <Form.Item name='Message'>
           <TextArea
-            placeholder='Message'
             className='border-[--border3] bg-transparent'
+            placeholder='Message'
             autoSize={{
               minRows: 6,
             }}

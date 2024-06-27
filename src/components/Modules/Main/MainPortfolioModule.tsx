@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { PortfolioWorksComponent } from "../../Components/PortfolioWorksComponent/PortfolioWorksComponet";
+import { PortfolioWorksComponent } from "../../Components/PortfolioWorksComponent/PortfolioWorksComponent";
 
 type Props = {
   portfolioWorksComponentProps: React.ComponentProps<
@@ -9,6 +10,8 @@ type Props = {
 };
 
 export function MainPortfolioModule(props: Props) {
+  const pathname = usePathname();
+
   return (
     <div
       className='grid gap-12 rounded-[0_0_2rem_0] bg-[--background3] px-4 py-24 lg:px-12'
@@ -25,7 +28,7 @@ export function MainPortfolioModule(props: Props) {
           </h3>
         </div>
         <div className='lg:self-center'>
-          <Link href='#'>View All Works</Link>
+          <Link href={`${pathname}-works`}>View All Works</Link>
         </div>
       </div>
       <PortfolioWorksComponent {...props.portfolioWorksComponentProps} />

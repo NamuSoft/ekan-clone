@@ -20,11 +20,20 @@
   pointer-events: none;
 }
 
-.portfolio:hover .img::after {
+.portfolio:is(:hover, :focus-visible) .img::after {
   opacity: 1;
 }
 
-.portfolio:hover .brand {
+.portfolio:is(:hover, :focus-visible) .brand {
   background-color: var(--primary);
   border-color: var(--primary);
+}
+
+.portfolio:is(:hover, :focus-visible) .arrow {
+  color: var(--primary);
+}
+
+.arrow:is(:hover, :focus-visible) {
+  color: var(--primary);
+  cursor: pointer;
 }

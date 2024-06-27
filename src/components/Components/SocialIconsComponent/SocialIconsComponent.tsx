@@ -27,7 +27,12 @@ export function SocialIconsComponent(props: Props) {
                   props.className
                 )}
               >
-                <SVGAtom iconName={iconName} width={12} height={12} />
+                <SVGAtom
+                  className='text-[--text]'
+                  iconName={iconName}
+                  width={12}
+                  height={12}
+                />
               </div>
             </Link>
           </li>
