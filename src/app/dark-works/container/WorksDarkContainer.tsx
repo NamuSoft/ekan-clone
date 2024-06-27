@@ -9,7 +9,7 @@ import {
 import "~/styles/dark.css";
 
 export const WorksDarkContainer = () => {
-  useTitle("Gavi - Dark");
+  useTitle("Gavi - Light");
 
   const worksTemplateProps: React.ComponentProps<typeof WorksTemplate> = {
     worksUtilityModulesProps: utilityModulesProps,

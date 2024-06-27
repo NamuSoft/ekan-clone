@@ -1,7 +1,7 @@
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import {
   darkLightPreviewComponentProps,
-  homeUtilityModulesProps,
+  utilityModulesProps,
 } from "~/utils/data";
 
 import "~/styles/dark.css";
@@ -11,7 +11,7 @@ export const HomeContainer = () => {
     homeContentModuleProps: {
       darkLightPreviewComponentProps,
     },
-    homeUtilityModulesProps,
+    homeUtilityModulesProps: utilityModulesProps,
   };
 
   return <HomeTemplate {...homeTemplateProps} />;
