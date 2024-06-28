@@ -31,6 +31,7 @@ export const MainDarkContainer = () => {
       hoverBorderColor: "none",
       activeBorderColor: "white",
       colorTextPlaceholder: "#ffffff33",
+      colorText: "#ffffff",
     },
     mainUtilityModulesProps: utilityModulesProps,
     mainHeaderModuleProps,
