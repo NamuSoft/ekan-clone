@@ -1,19 +1,16 @@
-import { useSnapshot } from "valtio";
 import { motion } from "framer-motion";
 
 import { NavMenuListComponent } from "~/components/Components/NavMenuListComponent/NavMenuListComponent";
 import { LogoAtom } from "~/components/Atoms/LogoAtom/LogoAtom";
 import { ToggleAtom } from "~/components/Atoms/ToggleAtom/ToggleAtom";
 
-import NavbarStore from "~/store/NavbarStore";
-
 type Props = {
   navMenuListComponentProps: React.ComponentProps<typeof NavMenuListComponent>;
+  toggleAtomProps: React.ComponentProps<typeof ToggleAtom>;
+  isNavOpen: boolean;
 };
 
 export function WorksHeaderModule(props: Props) {
-  const { open } = useSnapshot(NavbarStore.state);
-
   const variants = {
     hidden: { y: "-100%", opacity: 0 },
     visible: { y: 0, opacity: 1 },
@@ -26,7 +23,7 @@ export function WorksHeaderModule(props: Props) {
       <div>
         <motion.div
           initial='hidden'
-          animate={open ? "visible" : "hidden"}
+          animate={props.isNavOpen ? "visible" : "hidden"}
           variants={variants}
           transition={{ type: "tween", ease: "easeInOut" }}
           className='absolute right-0 top-0 mt-0 w-full border-b-2 border-solid border-b-[--border] bg-[--background2] pb-10 pt-20 lg:hidden'
@@ -43,7 +40,7 @@ export function WorksHeaderModule(props: Props) {
       </div>
 
       <div className='lg:hidden'>
-        <ToggleAtom onClick={() => NavbarStore.toggle()} />
+        <ToggleAtom {...props.toggleAtomProps} />
       </div>
     </div>
   );
