@@ -4,9 +4,9 @@ import { useTitle } from "~/hooks/useTitle";
 import { utilityModulesProps, worksContentModuleProps } from "~/utils/data";
 import { WorksTemplate } from "~/components/Templates/Works/WorksTemplate";
 
-import "~/styles/light.css";
+import "~/styles/dark.css";
 
-export const WorksLightContainer = () => {
+export const WorksDarkContainer = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   useTitle("Gavi - Light");
 
