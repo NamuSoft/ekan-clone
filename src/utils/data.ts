@@ -157,25 +157,25 @@ export const mainServicesModuleProps = {
   servicesInsightsComponentProps: {
     insights: [
       {
-        imageUrl: "/service1.png",
+        imageUrl: "/assets/service1.png",
         title: "UI / UX DESIGN",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service2.png",
+        imageUrl: "/assets/service2.png",
         title: "WEB DEVELOPMENT",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service3.png",
+        imageUrl: "/assets/service3.png",
         title: "SEO / MARKETING",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/service4.png",
+        imageUrl: "/assets/service4.png",
         title: "TECHNOLOGY SOLUTION",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
@@ -214,21 +214,21 @@ export const mainAboutModuleProps = {
       {
         serial: 0o1,
         year: 2019,
-        imageUrl: "/award1.png",
+        imageUrl: "/assets/award1.png",
         title: "02x Designer Award",
         accolade: "NOMINEE",
       },
       {
         serial: 0o2,
         year: 2020,
-        imageUrl: "/award2.png",
+        imageUrl: "/assets/award2.png",
         title: "02x Designer Award",
         accolade: "WINNER",
       },
       {
         serial: 0o3,
         year: 2021,
-        imageUrl: "/award2.png",
+        imageUrl: "/assets/award2.png",
         title: "02x Designer Award",
         accolade: "RUNNERS UP",
       },
