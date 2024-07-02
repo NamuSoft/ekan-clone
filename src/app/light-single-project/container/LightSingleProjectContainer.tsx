@@ -1,0 +1,82 @@
+import { useTitle } from "~/hooks/useTitle";
+import { SingleProjectTemplate } from "~/components/Templates/LightSingleProject/SingleProjectTemplate";
+import {
+  utilityModulesProps,
+  singleProjectContentModuleProps,
+} from "~/utils/data";
+
+import "~/styles/light.css";
+import { useState } from "react";
+
+export const LightSingleProjectContainer = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  useTitle("Gavi - Light");
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
+  const handleToggle = () => {
+    setIsNavOpen((prev) => !prev);
+  };
+
+  const singleProjectTemplateProps: React.ComponentProps<
+    typeof SingleProjectTemplate
+  > = {
+    worksUtilityModulesProps: utilityModulesProps,
+    worksHeaderModuleProps: {
+      navMenuListComponentProps: {
+        navItems: [
+          {
+            name: "Home",
+            link: "#",
+            onClick: closeNav,
+          },
+          {
+            name: "Services",
+            link: "#",
+            scrollToIndex: 1,
+            onClick: closeNav,
+          },
+          {
+            name: "About",
+            link: "#",
+            scrollToIndex: 2,
+            onClick: closeNav,
+          },
+          {
+            name: "Portfolio",
+            link: "#",
+            scrollToIndex: 3,
+            onClick: closeNav,
+          },
+          {
+            name: "Price",
+            link: "#",
+            scrollToIndex: 4,
+            onClick: closeNav,
+          },
+          {
+            name: "Contact",
+            link: "#",
+            scrollToIndex: 5,
+            onClick: closeNav,
+          },
+          {
+            name: "Blog",
+            link: "#",
+            scrollToIndex: 6,
+            onClick: closeNav,
+          },
+        ],
+      },
+      toggleAtomProps: {
+        onClick: handleToggle,
+      },
+      isNavOpen: isNavOpen,
+    },
+    singleProjectContentModuleProps,
+  };
+
+  return <SingleProjectTemplate {...singleProjectTemplateProps} />;
+};

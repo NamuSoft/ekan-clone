@@ -1,6 +1,7 @@
 import { message } from "antd";
 
 import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
+import { type ItemIcon } from "~/components/Components/ProjectDetailsPanelComponent/ProjectDetailsPanelComponent";
 import NavbarStore from "~/store/NavbarStore";
 
 const SocialIconsComponentProps = {
@@ -157,25 +158,25 @@ export const mainServicesModuleProps = {
   servicesInsightsComponentProps: {
     insights: [
       {
-        imageUrl: "/assets/service1.png",
+        imageUrl: "/service1.png",
         title: "UI / UX DESIGN",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service2.png",
+        imageUrl: "/service2.png",
         title: "WEB DEVELOPMENT",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service3.png",
+        imageUrl: "/service3.png",
         title: "SEO / MARKETING",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
       },
       {
-        imageUrl: "/assets/service4.png",
+        imageUrl: "/service4.png",
         title: "TECHNOLOGY SOLUTION",
         description:
           "There are many variations of passages of available but to the majority have suffered but the into majority.",
@@ -214,21 +215,21 @@ export const mainAboutModuleProps = {
       {
         serial: 0o1,
         year: 2019,
-        imageUrl: "/assets/award1.png",
+        imageUrl: "/award1.png",
         title: "02x Designer Award",
         accolade: "NOMINEE",
       },
       {
         serial: 0o2,
         year: 2020,
-        imageUrl: "/assets/award2.png",
+        imageUrl: "/award2.png",
         title: "02x Designer Award",
         accolade: "WINNER",
       },
       {
         serial: 0o3,
         year: 2021,
-        imageUrl: "/assets/award2.png",
+        imageUrl: "/award2.png",
         title: "02x Designer Award",
         accolade: "RUNNERS UP",
       },
@@ -393,5 +394,52 @@ export const worksContentModuleProps = {
         title: "From our gallery",
       },
     ],
+  },
+};
+
+export const singleProjectContentModuleProps = {
+  projectFeatureHighlightsComponentProps: {
+    listItemIcon: [
+      {
+        iconName: "arrowEnterRight",
+        title: "Amazing communication.",
+      },
+      {
+        iconName: "arrowEnterRight",
+        title: "Best trending designing experience.",
+      },
+      {
+        iconName: "arrowEnterRight",
+        title: "Email & Live chat.",
+      },
+      {
+        iconName: "arrowEnterRight",
+        title: "Amazing communication.",
+      },
+    ] as Array<ItemIcon>,
+  },
+  projectDetailsPanelComponentProps: {
+    listItemIcon: [
+      {
+        iconName: "calendar",
+        title: "DATE :",
+        detail: "6, August 2022",
+      },
+      {
+        iconName: "menu",
+        title: "CATEGORIES :",
+        detail: "Web Design",
+      },
+      {
+        iconName: "user",
+        title: "CLIENT :",
+        detail: "Themeforest",
+      },
+      {
+        iconName: "globe",
+        title: "WEBSITE :",
+        detail: "UI_ThemeZ.com",
+      },
+    ] as Array<ItemIcon>,
   },
 };
