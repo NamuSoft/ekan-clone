@@ -12,6 +12,8 @@ type Props = {
 export function AwardAtom(props: Props) {
   const pathname = usePathname();
 
+  console.log(`/assets${pathname}${props.imageUrl}`);
+
   return (
     <div className='h-full rounded-xl bg-[--background5] p-10'>
       <div className='flex justify-between'>

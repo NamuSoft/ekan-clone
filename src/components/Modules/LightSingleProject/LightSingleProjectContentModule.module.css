@@ -1,0 +1,29 @@
+.panel {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "pic pic pic" "textBlock textBlock textBlock" "sidebar sidebar sidebar" "stretch stretch stretch";
+}
+
+.pic {
+  grid-area: pic;
+  border-radius: 8px;
+}
+
+.text {
+  grid-area: textBlock;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  align-self: flex-start;
+}
+
+.stretch {
+  grid-area: stretch;
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    grid-template-areas: "pic pic pic" "textBlock textBlock sidebar" "stretch stretch stretch";
+  }
+}

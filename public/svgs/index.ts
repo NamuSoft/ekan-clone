@@ -7,3 +7,7 @@ export { default as speechBubble } from "./speechBubble.svg";
 export { default as calendar } from "./calendar.svg";
 export { default as arrowRight } from "./arrowRight.svg";
 export { default as arrowRightTop } from "./arrowRightTop.svg";
+export { default as arrowEnterRight } from "./arrowEnterRight.svg";
+export { default as globe } from "./globe.svg";
+export { default as user } from "./user.svg";
+export { default as menu } from "./menu.svg";

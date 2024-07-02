@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { SVGAtom } from "../SVGAtom/SVGAtom";
 
 import styles from "./PortfolioWorkAtom.module.css";
-import { SVGAtom } from "../SVGAtom/SVGAtom";
 
 type Props = {
   imageUrl: string;
@@ -10,10 +12,12 @@ type Props = {
 };
 
 export function PortfolioWorkAtom(props: Props) {
+  const pathname = usePathname();
+
   return (
     <div className={styles.portfolio}>
       <div className={styles.img}>
-        <Link href='#'>
+        <Link href={`${pathname}-single-project`}>
           <Image
             src={props.imageUrl}
             alt=''
@@ -33,7 +37,7 @@ export function PortfolioWorkAtom(props: Props) {
             Branding
           </span>
           <h5 className='text-lg font-medium leading-[1]'>
-            <Link href='#'>{props.title}</Link>
+            <Link href={`${pathname}-single-project`}>{props.title}</Link>
           </h5>
         </div>
         <SVGAtom
