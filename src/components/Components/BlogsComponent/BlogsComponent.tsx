@@ -7,7 +7,7 @@ type Props = {
 
 export function BlogsComponent(props: Props) {
   return (
-    <div className='grid gap-12 lg:auto-cols-[1fr] lg:grid-flow-col'>
+    <div className='grid auto-rows-[1fr] grid-cols-[repeat(_auto-fit,minmax(min(250px,100%),1fr)_)] gap-12'>
       {props.blogsContent.map((blogContent) => (
         <FadeInAtom key={blogContent.title}>
           <BlogAtom {...blogContent} />

@@ -25,7 +25,7 @@ export function BlogAtom(props: Props) {
             />{" "}
             6 , Aug 2022
           </span>
-          <h5 className='text-xl leading-normal underline hover:text-[--primary]'>
+          <h5 className='text-lg leading-normal underline hover:text-[--primary]'>
             <Link href='#'>{props.title}</Link>
           </h5>
         </div>
