@@ -474,3 +474,57 @@ export const lightBlogsContentModuleProps = {
     ],
   },
 };
+
+export const lightSingleBlogContentModuleProps = {
+  socialIconsComponentProps: {
+    socialLinks: [
+      {
+        iconName: "facebook",
+        link: "#",
+      },
+      {
+        iconName: "twitter",
+        link: "#",
+      },
+      {
+        iconName: "youtube",
+        link: "#",
+      },
+    ] as SocialLinks,
+  },
+  commentsSectionComponentProps: {
+    commentAtomProps: [
+      {
+        imageUrl: "/assets/author1.jpg",
+        commentorName: "Megan Fox",
+        comment:
+          "Ut elementum turpis lorem Morbi eget urna imperdiet, pellentesque nulla id, tempus mauris.",
+      },
+      {
+        imageUrl: "/assets/author1.jpg",
+        commentorName: "Megan Fox",
+        comment:
+          "Ut elementum turpis lorem Morbi eget urna imperdiet, pellentesque nulla id, tempus mauris.",
+      },
+    ],
+  },
+  addCommentComponentProps: {
+    onFinish,
+  },
+  blogsComponentProps: {
+    blogsContent: [
+      {
+        imageUrl: "/assets/blog1.jpg",
+        title: "12 unique examples of portfolio websites.",
+      },
+      {
+        imageUrl: "/assets/blog2.jpg",
+        title: "Dealing with spring allergy symptoms.",
+      },
+      {
+        imageUrl: "/assets/blog3.jpg",
+        title: "Best wireframe tools for web designers.",
+      },
+    ],
+  },
+};
