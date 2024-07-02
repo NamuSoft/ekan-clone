@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { SVGAtom } from "../SVGAtom/SVGAtom";
 
@@ -9,6 +10,8 @@ type Props = {
 };
 
 export function BlogAtom(props: Props) {
+  const pathname = usePathname();
+
   return (
     <>
       <div className='overflow-hidden rounded-[0.25rem_0.25rem_0_0]'>
@@ -26,7 +29,7 @@ export function BlogAtom(props: Props) {
             6 , Aug 2022
           </span>
           <h5 className='text-lg leading-normal underline hover:text-[--primary]'>
-            <Link href='#'>{props.title}</Link>
+            <Link href={`${pathname}-single-blog`}>{props.title}</Link>
           </h5>
         </div>
         <div className='flex items-center px-4 py-5 text-sm'>

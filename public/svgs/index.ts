@@ -11,3 +11,6 @@ export { default as arrowEnterRight } from "./arrowEnterRight.svg";
 export { default as globe } from "./globe.svg";
 export { default as user } from "./user.svg";
 export { default as menu } from "./menu.svg";
+export { default as facebook } from "./facebook.svg";
+export { default as twitter } from "./twitter.svg";
+export { default as youtube } from "./youtube.svg";
