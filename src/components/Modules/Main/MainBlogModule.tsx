@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { FadeInAtom } from "~/components/Atoms/Animation/FadeInAtom/FadeInAtom";
 import { BlogsComponent } from "~/components/Components/BlogsComponent/BlogsComponent";
 
@@ -7,6 +9,8 @@ type Props = {
 };
 
 export function MainBlogModule(props: Props) {
+  const pathname = usePathname();
+
   return (
     <div
       className='grid gap-8 rounded-[0_0_1rem_1rem] bg-[--background3] px-4 py-24 lg:px-12'
@@ -21,7 +25,7 @@ export function MainBlogModule(props: Props) {
         </div>
         <div>
           <div>
-            <Link href='#'>
+            <Link href={`${pathname}-blogs`}>
               <span>View All Posts </span>
             </Link>
           </div>

@@ -443,3 +443,34 @@ export const singleProjectContentModuleProps = {
     ] as Array<ItemIcon>,
   },
 };
+
+export const lightBlogsContentModuleProps = {
+  blogsComponentProps: {
+    blogsContent: [
+      {
+        imageUrl: "/assets/blog1.jpg",
+        title: "12 unique examples of portfolio websites.",
+      },
+      {
+        imageUrl: "/assets/blog2.jpg",
+        title: "Dealing with spring allergy symptoms.",
+      },
+      {
+        imageUrl: "/assets/blog3.jpg",
+        title: "Best wireframe tools for web designers.",
+      },
+      {
+        imageUrl: "/assets/blog1.jpg",
+        title: "12 unique examples of portfolio websites.",
+      },
+      {
+        imageUrl: "/assets/blog2.jpg",
+        title: "Dealing with spring allergy symptoms.",
+      },
+      {
+        imageUrl: "/assets/blog3.jpg",
+        title: "Best wireframe tools for web designers.",
+      },
+    ],
+  },
+};
