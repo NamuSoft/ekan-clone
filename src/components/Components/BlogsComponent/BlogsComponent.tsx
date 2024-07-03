@@ -2,7 +2,7 @@ import { FadeInAtom } from "~/components/Atoms/Animation/FadeInAtom/FadeInAtom";
 import { BlogAtom } from "~/components/Atoms/BlogAtom/BlogAtom";
 
 type Props = {
-  blogsContent: Array<React.ComponentProps<typeof BlogAtom>>;
+  blogsContent: React.ComponentProps<typeof BlogAtom>[];
 };
 
 export function BlogsComponent(props: Props) {

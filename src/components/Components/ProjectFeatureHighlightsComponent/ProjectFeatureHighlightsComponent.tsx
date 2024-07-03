@@ -3,7 +3,7 @@ import { SVGAtom } from "~/components/Atoms/SVGAtom/SVGAtom";
 import { type ItemIcon } from "../ProjectDetailsPanelComponent/ProjectDetailsPanelComponent";
 
 type Props = {
-  listItemIcon: Array<ItemIcon>;
+  listItemIcon: ItemIcon[];
 };
 
 export function ProjectFeatureHighlightsComponent(props: Props) {

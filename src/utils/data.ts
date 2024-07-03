@@ -1,8 +1,11 @@
 import { message } from "antd";
 
-import { type SocialLinks } from "~/components/Components/SocialIconsComponent/SocialIconsComponent";
-import { type ItemIcon } from "~/components/Components/ProjectDetailsPanelComponent/ProjectDetailsPanelComponent";
+import { type DetailPanelAtom } from "~/components/Atoms/DetailPanelAtom/DetailPanelAtom";
+import { type SocialIconAtom } from "~/components/Atoms/SocialIconAtom/SocialIconAtom";
 import NavbarStore from "~/store/NavbarStore";
+
+type SocialLinks = React.ComponentProps<typeof SocialIconAtom>[];
+type ItemIcon = React.ComponentProps<typeof DetailPanelAtom>;
 
 const SocialIconsComponentProps = {
   socialLinks: [
@@ -416,7 +419,7 @@ export const singleProjectContentModuleProps = {
         iconName: "arrowEnterRight",
         title: "Amazing communication.",
       },
-    ] as Array<ItemIcon>,
+    ] as ItemIcon[],
   },
   projectDetailsPanelComponentProps: {
     listItemIcon: [
@@ -440,7 +443,7 @@ export const singleProjectContentModuleProps = {
         title: "WEBSITE :",
         detail: "UI_ThemeZ.com",
       },
-    ] as Array<ItemIcon>,
+    ] as ItemIcon[],
   },
 };
 

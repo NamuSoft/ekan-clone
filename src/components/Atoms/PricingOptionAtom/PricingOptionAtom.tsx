@@ -5,7 +5,7 @@ import styles from "./PricingOptionAtom.module.css";
 type Props = {
   title: string;
   price: number;
-  features: Array<string>;
+  features: string[];
 };
 
 export function PricingOptionAtom(props: Props) {

@@ -1,7 +1,7 @@
 import { PreviewAtom } from "~/components/Atoms/PreviewAtom/PreviewAtom";
 
 type Props = {
-  darkLightProps: Array<React.ComponentProps<typeof PreviewAtom>>;
+  darkLightProps: React.ComponentProps<typeof PreviewAtom>[];
 };
 
 export function DarkLightPreviewComponent(props: Props) {
