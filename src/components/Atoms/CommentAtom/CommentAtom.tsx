@@ -16,7 +16,7 @@ export function CommentAtom(props: Props) {
         props.className
       )}
     >
-      <div className='flex flex-col gap-4 md:flex-row'>
+      <div className='flex w-[90%] flex-col gap-4 md:flex-row'>
         <div className='h-16 w-16 overflow-hidden rounded-[50%] leading-none'>
           <Image
             src={props.imageUrl}
