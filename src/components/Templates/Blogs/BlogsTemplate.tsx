@@ -4,17 +4,15 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import { WorksUtilityModules } from "~/components/Modules/Utility/WorksUtilityModules";
 import { WorksHeaderModule } from "~/components/Modules/Header/WorksHeaderModule";
 import { HomeFooterModule } from "~/components/Modules/Footer/HomeFooterModule";
-import { LightBlogsContentModule } from "~/components/Modules/LightBlogs/LightBlogsContentModule";
+import { BlogsContentModule } from "~/components/Modules/Blogs/BlogsContentModule";
 
 type Props = {
   worksUtilityModulesProps: React.ComponentProps<typeof WorksUtilityModules>;
   worksHeaderModuleProps: React.ComponentProps<typeof WorksHeaderModule>;
-  lightBlogsContentModuleProps: React.ComponentProps<
-    typeof LightBlogsContentModule
-  >;
+  blogsContentModuleProps: React.ComponentProps<typeof BlogsContentModule>;
 };
 
-export const LightBlogsTemplate = (props: Props) => {
+export const BlogsTemplate = (props: Props) => {
   return (
     <Layout
       style={{ height: "100%" }}
@@ -33,7 +31,7 @@ export const LightBlogsTemplate = (props: Props) => {
       </Header>
 
       <Content className='z-[2] text-[--text]'>
-        <LightBlogsContentModule {...props.lightBlogsContentModuleProps} />
+        <BlogsContentModule {...props.blogsContentModuleProps} />
       </Content>
 
       <Footer className='z-[2] bg-transparent'>
