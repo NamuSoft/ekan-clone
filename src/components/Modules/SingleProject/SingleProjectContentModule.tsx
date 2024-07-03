@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ProjectDetailsPanelComponent } from "~/components/Components/ProjectDetailsPanelComponent/ProjectDetailsPanelComponent";
 import { ProjectFeatureHighlightsComponent } from "~/components/Components/ProjectFeatureHighlightsComponent/ProjectFeatureHighlightsComponent";
 
-import styles from "./LightSingleProjectContentModule.module.css";
+import styles from "./SingleProjectContentModule.module.css";
 import Link from "next/link";
 
 type Props = {
