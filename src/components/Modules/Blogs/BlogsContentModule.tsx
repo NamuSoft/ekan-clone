@@ -8,7 +8,7 @@ type Props = {
   blogsComponentProps: React.ComponentProps<typeof BlogsComponent>;
 };
 
-export const LightBlogsContentModule = (props: Props) => {
+export const BlogsContentModule = (props: Props) => {
   return (
     <div className='grid gap-10 rounded-[1rem] bg-[--background3] px-4 py-24 lg:px-24'>
       <div className='flow text-center'>
@@ -17,7 +17,7 @@ export const LightBlogsContentModule = (props: Props) => {
           <span className='text-[--primary]'>Articles</span> &amp; Resources
         </h3>
       </div>
-      <div className='rounded-lg border border-[--border] px-4'>
+      <div className='rounded-lg border border-[--border]'>
         <div className='overflow-hidden rounded-lg'>
           <Image
             src='/assets/blogm1.jpg'

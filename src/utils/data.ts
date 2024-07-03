@@ -447,7 +447,7 @@ export const singleProjectContentModuleProps = {
   },
 };
 
-export const lightBlogsContentModuleProps = {
+export const blogsContentModuleProps = {
   blogsComponentProps: {
     blogsContent: [
       {

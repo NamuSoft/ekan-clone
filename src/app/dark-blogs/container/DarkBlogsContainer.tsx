@@ -4,11 +4,11 @@ import { useTitle } from "~/hooks/useTitle";
 import { utilityModulesProps, blogsContentModuleProps } from "~/utils/data";
 import { BlogsTemplate } from "~/components/Templates/Blogs/BlogsTemplate";
 
-import "~/styles/light.css";
+import "~/styles/dark.css";
 
-export const LightBlogsContainer = () => {
+export const DarkBlogsContainer = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  useTitle("Gavi - Light");
+  useTitle("Gavi - Dark");
 
   const closeNav = () => {
     setIsNavOpen(false);
