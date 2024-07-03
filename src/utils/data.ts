@@ -478,7 +478,7 @@ export const blogsContentModuleProps = {
   },
 };
 
-export const lightSingleBlogContentModuleProps = {
+export const singleBlogContentModuleProps = {
   socialIconsComponentProps: {
     socialLinks: [
       {
