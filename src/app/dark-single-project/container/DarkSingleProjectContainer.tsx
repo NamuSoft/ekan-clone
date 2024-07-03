@@ -5,12 +5,12 @@ import {
   singleProjectContentModuleProps,
 } from "~/utils/data";
 
-import "~/styles/light.css";
+import "~/styles/Dark.css";
 import { useState } from "react";
 
-export const LightSingleProjectContainer = () => {
+export const DarkSingleProjectContainer = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  useTitle("Gavi - Light");
+  useTitle("Gavi - Dark");
 
   const closeNav = () => {
     setIsNavOpen(false);

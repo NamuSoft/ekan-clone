@@ -3,7 +3,7 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 
 import { WorksUtilityModules } from "~/components/Modules/Utility/WorksUtilityModules";
 import { WorksHeaderModule } from "~/components/Modules/Header/WorksHeaderModule";
-import { SingleProjectContentModule } from "~/components/Modules/LightSingleProject/LightSingleProjectContentModule";
+import { SingleProjectContentModule } from "~/components/Modules/SingleProject/SingleProjectContentModule";
 import { HomeFooterModule } from "~/components/Modules/Footer/HomeFooterModule";
 
 type Props = {
