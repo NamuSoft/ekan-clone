@@ -7,11 +7,11 @@ import {
 } from "~/utils/data";
 import { SingleBlogTemplate } from "~/components/Templates/SingleBlog/SingleBlogTemplate";
 
-import "~/styles/light.css";
+import "~/styles/dark.css";
 
-export const LightSingleBlogContainer = () => {
+export const DarkSingleBlogContainer = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  useTitle("Gavi - Light");
+  useTitle("Gavi - Dark");
 
   const closeNav = () => {
     setIsNavOpen(false);
@@ -28,9 +28,9 @@ export const LightSingleBlogContainer = () => {
       activeBg: "transparent",
       hoverBg: "transparent",
       hoverBorderColor: "none",
-      activeBorderColor: "black",
-      colorTextPlaceholder: "#00000033",
-      colorText: "#000000",
+      activeBorderColor: "white",
+      colorTextPlaceholder: "#ffffff33",
+      colorText: "#ffffff",
     },
     worksUtilityModulesProps: utilityModulesProps,
     worksHeaderModuleProps: {

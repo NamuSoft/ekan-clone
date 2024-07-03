@@ -8,7 +8,7 @@ import "~/styles/dark.css";
 
 export const WorksDarkContainer = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  useTitle("Gavi - Light");
+  useTitle("Gavi - Dark");
 
   const closeNav = () => {
     setIsNavOpen(false);

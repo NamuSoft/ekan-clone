@@ -16,7 +16,7 @@ type Props = {
   blogsComponentProps: React.ComponentProps<typeof BlogsComponent>;
 };
 
-export const LightSingleBlogContentModule = (props: Props) => {
+export const SingleBlogContentModule = (props: Props) => {
   return (
     <div className='grid gap-10 rounded-[1rem] bg-[--background3] px-4 py-24 lg:px-24'>
       <div>
