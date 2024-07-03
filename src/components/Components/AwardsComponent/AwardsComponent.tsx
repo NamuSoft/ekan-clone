@@ -2,7 +2,7 @@ import { AwardAtom } from "~/components/Atoms/AwardAtom/AwardAtom";
 import { FadeInAtom } from "~/components/Atoms/Animation/FadeInAtom/FadeInAtom";
 
 type Props = {
-  awards: Array<React.ComponentProps<typeof AwardAtom>>;
+  awards: React.ComponentProps<typeof AwardAtom>[];
 };
 
 export function AwardsComponent(props: Props) {

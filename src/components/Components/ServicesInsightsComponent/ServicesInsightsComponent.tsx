@@ -2,7 +2,7 @@ import { InsightsAtom } from "../../Atoms/InsightsAtom/InsightsAtom";
 import { FadeInAtom } from "../../Atoms/Animation/FadeInAtom/FadeInAtom";
 
 type Props = {
-  insights: Array<React.ComponentProps<typeof InsightsAtom>>;
+  insights: React.ComponentProps<typeof InsightsAtom>[];
 };
 
 export function ServicesInsightsComponent(props: Props) {

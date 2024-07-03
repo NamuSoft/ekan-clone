@@ -2,7 +2,7 @@ import { PricingOptionAtom } from "~/components/Atoms/PricingOptionAtom/PricingO
 import { FadeInAtom } from "~/components/Atoms/Animation/FadeInAtom/FadeInAtom";
 
 type Props = {
-  options: Array<React.ComponentProps<typeof PricingOptionAtom>>;
+  options: React.ComponentProps<typeof PricingOptionAtom>[];
 };
 
 export function PricingOptionsComponent(props: Props) {

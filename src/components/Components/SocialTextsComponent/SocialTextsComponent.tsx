@@ -1,7 +1,7 @@
 import { SocialTextAtom } from "~/components/Atoms/SocialTextAtom/SocialTextAtom";
 
 type Props = {
-  socials: Array<React.ComponentProps<typeof SocialTextAtom>>;
+  socials: React.ComponentProps<typeof SocialTextAtom>[];
 };
 
 export function SocialTextsComponent(props: Props) {

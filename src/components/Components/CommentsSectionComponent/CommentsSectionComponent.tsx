@@ -3,7 +3,7 @@ import { CommentAtom } from "~/components/Atoms/CommentAtom/CommentAtom";
 import styles from "./CommentsSectionComponent.module.css";
 
 type Props = {
-  commentAtomProps: Array<React.ComponentProps<typeof CommentAtom>>;
+  commentAtomProps: React.ComponentProps<typeof CommentAtom>[];
 };
 
 export function CommentsSectionComponent(props: Props) {

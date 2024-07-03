@@ -5,7 +5,7 @@ import { useSmoothScrollNav } from "~/hooks/useSmoothScroll";
 import { NavItemAtom } from "../../Atoms/NavItemAtom/NavItemAtom";
 
 type Prop = {
-  navItems: Array<React.ComponentProps<typeof NavItemAtom>>;
+  navItems: React.ComponentProps<typeof NavItemAtom>[];
   className?: string;
 };
 

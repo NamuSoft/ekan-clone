@@ -2,7 +2,7 @@ import { PortfolioWorkAtom } from "~/components/Atoms/ProfileAtom/PortfolioWorkA
 import { FadeInUpAtom } from "~/components/Atoms/Animation/FadeInUpAtom/FadeInUpAtom";
 
 type Props = {
-  portfolios: Array<React.ComponentProps<typeof PortfolioWorkAtom>>;
+  portfolios: React.ComponentProps<typeof PortfolioWorkAtom>[];
 };
 
 export function PortfolioWorksComponent(props: Props) {

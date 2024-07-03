@@ -1,7 +1,7 @@
 import { ImageIconAtom } from "~/components/Atoms/ImageIconAtom/ImageIconAtom";
 
 type Props = {
-  Icons: Array<React.ComponentProps<typeof ImageIconAtom>>;
+  Icons: React.ComponentProps<typeof ImageIconAtom>[];
 };
 
 export function IconOverlayComponent(props: Props) {

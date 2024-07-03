@@ -1,7 +1,7 @@
 import { SkillAtom } from "../../Atoms/SkillAtom/SkillAtom";
 
 type Prop = {
-  skills: Array<React.ComponentProps<typeof SkillAtom>>;
+  skills: React.ComponentProps<typeof SkillAtom>[];
 };
 
 export function AboutSkillComponent(props: Prop) {
